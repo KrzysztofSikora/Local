@@ -1,0 +1,25 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+    Najdłuższe rzeki świata
+{% endblock %}
+{% block content %}
+    <h1>Najdłuższe rzeki świata</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>lp.</th>
+            <th>Nazwa</th>
+            <th>Długość</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ loop.index }}.</td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.length }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
