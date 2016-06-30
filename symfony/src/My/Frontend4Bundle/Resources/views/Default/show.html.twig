@@ -1,0 +1,13 @@
+{% extends "::layout.html.twig" %}
+{% block html_title %}
+    {{ entity }}
+{% endblock %}
+{% block content %}
+<div id="tresc">
+    <h2>{{ entity }}</h2>
+    <p>
+        {{ entity.contents|nl2br }}
+    </p>
+    <p><a href="{{ path('homepage') }}">powrót</a>
+</div>
+{% endblock %}

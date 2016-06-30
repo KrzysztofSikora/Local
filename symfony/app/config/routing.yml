@@ -1,18 +1,23 @@
-my_frontend3:
-    resource: "@MyFrontend3Bundle/Controller/"
+my_frontend4:
+    resource: "@MyFrontend4Bundle/Controller/"
     type:     annotation
     prefix:   /
 
-my_frontend2:
-    resource: "@MyFrontend2Bundle/Controller/"
-    type:     annotation
-    prefix:   /
+#my_frontend3:
+#    resource: "@MyFrontend3Bundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+#
+#my_frontend2:
+#    resource: "@MyFrontend2Bundle/Controller/"
+#    type:     annotation
+#    prefix:   /
 
 #my_frontend:
 #    resource: "@MyFrontendBundle/Controller/"
 #    type:     annotation
 #    prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+#app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation

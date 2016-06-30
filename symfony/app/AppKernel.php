@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new My\Frontend2Bundle\MyFrontend2Bundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new My\Frontend3Bundle\MyFrontend3Bundle(),
+            new My\Frontend4Bundle\MyFrontend4Bundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
