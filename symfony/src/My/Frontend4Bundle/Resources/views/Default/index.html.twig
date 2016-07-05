@@ -3,7 +3,7 @@
     <ul id="menu">
         {% for entity in entities %}
             <li>
-                <a href="{{ path('song_show', { 'id': entity.id }) }}">
+                <a href="{{ path('song_show', { 'slug': entity.slug }) }}">
                     {{ entity }}
                 </a>
             </li>

@@ -20,13 +20,13 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/{id}.html", name="song_show")
+     * @Route("/{slug}.html", name="song_show")
      * @Template()
      */
-    public function showAction($id)
+    public function showAction($slug)
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $entity = $em->getRepository('MyFrontend4Bundle:Song')->find($id);
+        $entity = $em->getRepository('MyFrontend4Bundle:Song')->findOneBySlug($slug);
         if (!$entity) {
             throw $this->createNotFoundException('Podana strona nie istnieje!');
         }

@@ -3,6 +3,7 @@
 namespace My\Frontend4Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Song
@@ -12,6 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Song
 {
+
+    /**
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
+
     /**
      * @var int
      *
@@ -100,5 +108,28 @@ class Song
     public function getContents()
     {
         return $this->contents;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Song
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
