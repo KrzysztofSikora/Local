@@ -1,7 +1,12 @@
-my_frontend4:
-    resource: "@MyFrontend4Bundle/Controller/"
+my_frontend5:
+    resource: "@MyFrontend5Bundle/Controller/"
     type:     annotation
     prefix:   /
+
+#my_frontend4:
+#    resource: "@MyFrontend4Bundle/Controller/"
+#    type:     annotation
+#    prefix:   /
 
 #my_frontend3:
 #    resource: "@MyFrontend3Bundle/Controller/"
