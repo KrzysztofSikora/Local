@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new My\Frontend3Bundle\MyFrontend3Bundle(),
             new My\Frontend4Bundle\MyFrontend4Bundle(),
             new My\Frontend5Bundle\MyFrontend5Bundle(),
+            new My\Frontend6Bundle\MyFrontend6Bundle(),
+            new My\Frontend7Bundle\MyFrontend7Bundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
