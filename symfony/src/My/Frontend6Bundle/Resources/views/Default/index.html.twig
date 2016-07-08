@@ -1,0 +1,25 @@
+{% extends "::layout.html.twig" %}
+{% block contents %}
+<h1>Pliki do pobrania</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Plik</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% set klasy = ['a', 'b'] %}
+    {% for entity in entities %}
+        <tr class="{{ cycle(klasy, loop.index) }}">
+            <td>
+
+                <a href="{{ path('file_show', { 'filename': entity.filename }) }}"><br/>
+                    <img src ="{{ path('file_show', { 'filename': entity.filename }) }}"><br />
+                    {{ entity.filename }}
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
