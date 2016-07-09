@@ -1,1 +1,16 @@
-Hello World!
+{% extends "::base.html.twig" %}
+{% block body %}
+    <h1>Lista wszystkich użytkowników</h1>
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Informacje</th>
+        </tr>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.profil.info }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

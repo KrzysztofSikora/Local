@@ -1,4 +1,0 @@
-services:
-#    my_frontend4.example:
-#        class: My\Frontend4Bundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
