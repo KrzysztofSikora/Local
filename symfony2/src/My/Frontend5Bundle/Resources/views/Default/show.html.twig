@@ -1,0 +1,8 @@
+{% extends "::layout.html.twig" %}
+{% block title %}Jan Kochanowski: {{ entity }} {% endblock %}
+{% block contents %}
+<h3>{{ entity }}</h3>
+    <p>
+        {{ entity.tresc | nl2br }}
+    </p>
+{% endblock %}
