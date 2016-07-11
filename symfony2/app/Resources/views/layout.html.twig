@@ -1,9 +1,20 @@
+{#{% extends "::base.html.twig" %}#}
+{#{% block body %}#}
+    {#<div id="pojemnik">#}
+        {#<div id="tresc">#}
+            {#{% block contents %}#}
+            {#{% endblock %}#}
+        {#</div>#}
+    {#</div>#}
+{#{% endblock %}#}
+
 {% extends "::base.html.twig" %}
 {% block body %}
-    <div id="pojemnik">
-        <div id="tresc">
-            {% block contents %}
-            {% endblock %}
-        </div>
-    </div>
+    <ul>
+        <li><a href="{{ path('homepage') }}">Strona główna</a></li>
+        <li><a href="{{ path('kontynent_index') }}">Lista kontynentów</a></li>
+        <li><a href="{{ path('panstwo_index') }}">Lista państw</a></li>
+    </ul>
+    {% block content %}
+    {% endblock %}
 {% endblock %}

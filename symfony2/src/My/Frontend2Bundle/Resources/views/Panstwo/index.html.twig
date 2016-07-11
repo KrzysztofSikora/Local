@@ -1,0 +1,13 @@
+{% extends "::layout.html.twig" %}
+
+{% block content %}
+  <h2>Lista wszystkich państw</h2>
+  <ul>
+    {% for panstwo in entities %}
+      <li>
+        {{ panstwo }} (kontynent: {{ panstwo.kontynent.nazwa }})
+
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
