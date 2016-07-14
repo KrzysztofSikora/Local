@@ -1,0 +1,18 @@
+{% extends "::layout.html.twig" %}
+{% block content %}
+    <h2>Lista wszystkich aktorów</h2>
+    <ul>
+        {% for aktor in entities %}
+            <li>
+                {{ aktor }}
+                <ul>
+                    {% for film in aktor.filmy %}
+                        <li>
+                            {{ film }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
