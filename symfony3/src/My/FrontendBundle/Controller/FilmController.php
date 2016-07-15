@@ -22,4 +22,21 @@ class FilmController extends Controller
         $entities = $em->getRepository('MyFrontendBundle:Film')->findAll();
         return array('entities' => $entities);
     }
+    
+    /**
+     * Szczegolowe dane filmu
+     *
+     * @Route("/film/{id}.html", name="film_show")
+     * @Template()
+     */
+    
+    public function showAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $entity = $em->getRepository('MyFrontendBundle:Film')->find($id);
+        if (!$entity) {
+            throw $this->createNotFoundException('Brak filmu o podanym id!');
+        }
+        return array('entity' => $entity);
+    }
 }

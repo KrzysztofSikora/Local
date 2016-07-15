@@ -24,4 +24,20 @@ class AktorController extends Controller
         $entities = $em->getRepository('MyFrontendBundle:Aktor')->findAll();
         return array('entities' => $entities);
     }
+    /**
+     * Szczegolowe dane aktora
+     *
+     * @Route("/aktor/{id}.html", name="aktor_show")
+     * @Template()
+     */
+    
+    public function showAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $entity = $em->getRepository('MyFrontendBundle:Aktor')->find($id);
+        if (!$entity) {
+            throw $this->createNotFoundException('Brak aktora o podanym id!');
+        }
+        return array('entity' => $entity);
+    }
 }

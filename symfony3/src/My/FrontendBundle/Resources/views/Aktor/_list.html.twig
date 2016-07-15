@@ -1,0 +1,9 @@
+<ul>
+    {% for aktor in dane %}
+        <li>
+            <a href="{{ path('aktor_show', { 'id': aktor.id }) }}">
+                {{ aktor }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
