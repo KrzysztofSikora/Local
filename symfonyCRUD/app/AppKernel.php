@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new MyFrontendBundle\MyFrontendBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new My\UserBundle\MyUserBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
