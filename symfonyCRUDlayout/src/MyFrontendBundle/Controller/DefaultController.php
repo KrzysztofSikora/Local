@@ -37,4 +37,22 @@ class DefaultController extends Controller
 //        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
         return $this->render('MyFrontendBundle:Default:index.html.twig', array('pagination' => $pagination));
     }
+
+    /**
+     * @Route("/history")
+     */
+    public function historyAction()
+    {
+        return $this->render('MyFrontendBundle:Default:history.html.twig');
+    }
+
+    /**
+     * @Route("/members")
+     */
+    public function membersAction()
+    {
+        return $this->render('MyFrontendBundle:Default:members.html.twig');
+    }
+
+
 }
