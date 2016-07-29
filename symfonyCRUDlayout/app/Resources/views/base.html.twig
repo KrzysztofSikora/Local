@@ -37,21 +37,18 @@
             padding-left: 0;
 
         }
-        .navbar-nav{
-            float:none;
-            margin:  auto;
+
+        .navbar-nav {
+            float: none;
+            margin: auto;
             display: table;
             table-layout: fixed;
-
 
         }
 
         .navbar {
             border: 0;
         }
-
-
-
 
         #bs-example-navbar-collapse-1 > ol > ul > li {
             /*border-right: 2px dotted #444444;*/
@@ -61,22 +58,21 @@
             font-size: 18px;
             padding: 0px;
         }
+
         #bs-example-navbar-collapse-1 > ol > ul > li:nth-child(1) > a {
             /*border-left: 2px dotted #444444;*/
         }
+
         #bs-example-navbar-collapse-1 > ul > li:hover {
             background-color: #000000;
         }
+
         /*#bs-example-navbar-collapse-1 > ol > ul > li > a:hover {*/
-            /*background: black;*/
+        /*background: black;*/
         /*}*/
-        .navbar-default .navbar-nav>li>a {
+        .navbar-default .navbar-nav > li > a {
             color: #ffffff;
         }
-
-
-
-
 
         body > div > nav > div {
             background-color: #c34f4f;
@@ -120,6 +116,16 @@
             /*float: left;*/
         }
 
+        #content {
+            {#background-image: url( {{ asset('images/godło1.png') }});#}
+            {#background-repeat: no-repeat;#}
+            {#background-attachment: fixed;#}
+            {#background-position: center center;#}
+            {#background-size: 300px;#}
+            /*opacity: 0.2;*/
+        }
+
+
         .gplus:hover {
             background-color: #d95333;
         }
@@ -140,21 +146,18 @@
             margin-top: 0;
 
         }
+
         .carousel-inner {
             width: 100%;
-            max-height: 500px !important;
+            max-height: 300px !important;
         }
 
         #myCarousel > div > div > img {
-            max-height: 500px !important;
+            max-height: 300px !important;
         }
 
         #content {
-            {#background: url({{ asset('images/godło1.png') }});#}
-            {#background-repeat: no-repeat;#}
-            {#background-attachment: fixed;#}
-            {#background-position: center center;#}
-            {#background-size: 30%;#}
+        {#background: url({{ asset('images/godło1.png') }});#}{#background-repeat: no-repeat;#}{#background-attachment: fixed;#}{#background-position: center center;#}{#background-size: 30%;#}
         }
 
         .breadcrumb {
@@ -167,6 +170,19 @@
             text-align: center;
             min-width: 144px;
         }
+
+        label {
+            padding: 15px;
+        }
+
+        input {
+            float: right;
+        }
+
+        textarea {
+            float: right;
+        }
+
     </style>
 
 </head>
@@ -174,17 +190,16 @@
 <div class="container">
 
 
-        <ol class="breadcrumb">
+    <ol class="breadcrumb">
 
-           <h1 style="color: #c34f4f;text-align: center">orkiestra.com</h1>
+        <h1 style="color: #c34f4f;text-align: center">orkiestra.com</h1>
 
 
-        </ol>
-        {#<div class="logo">#}
-            {#<h1 style="color: #c34f4f;text-align: center">orkiestra.com</h1>#}
+    </ol>
+    {#<div class="logo">#}
+    {#<h1 style="color: #c34f4f;text-align: center">orkiestra.com</h1>#}
 
-        {#</div>#}
-
+    {#</div>#}
 
 
     <!-- Carousel
@@ -261,14 +276,14 @@
 
                         <li><a href="./">Strona główna</a></li>
 
-                        <li><a href="history">Historia</a></li>
-                        <li><a href="members#">Skład</a></li>
-                        <li><a href="#">Galeria</a></li>
+                        <li><a href="./history">Historia</a></li>
+                        <li><a href="./members">Skład</a></li>
+                        <li><a href="http://localhost/symfonyCRUDlayout/web/app_dev.php/history">Galeria</a></li>
                         <li><a href="#">Cssssssssdsds</a></li>
 
                         <li><a href="#">Linus Torvalds</a></li>
                         {#<li><a href="#">Linus Torvalds</a></li>#}
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="http://localhost/symfonyCRUDlayout/web/app_dev.php/contact">Kontakt</a></li>
 
                     </ul>
                 </ol>
@@ -302,20 +317,23 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="col-md-3">
-                    <div class="fb"><i class="icon-facebook"></i></div>
+                    <div class="fb"><a
+                                href="https://www.facebook.com/krzysztofsikora24pl-1541480686181605"><i
+                                    class="icon-facebook"></i></a>
+                    </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="yt"><i class="icon-youtube-squared"></i></div>
+                    <div class="yt"><a href="https://www.youtube.com"><i class="icon-youtube-squared"></i></a></div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="tw"><i class="icon-twitter"></i></div>
+                    <div class="tw"><a href="https://www.instagram.com"><i class="icon-instagram"></i></a></div>
 
                 </div>
 
                 <div class="col-md-3">
-                    <div class="gplus"><i class="icon-gplus"></i></div>
+                    <div class="gplus"><a href="https://www.plus.google.com"><i class="icon-gplus"></i></a></div>
                 </div>
 
                 <div style="clear: both"></div>

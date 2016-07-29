@@ -30,7 +30,7 @@ class DefaultController extends Controller
         $pagination = $paginator->paginate(
             $query, /* query NOT result */
             $request->query->getInt('page', 1)/*page number*/,
-            10/*limit per page*/
+            4/*limit per page*/
         );
 
         // parameters to template
@@ -54,5 +54,12 @@ class DefaultController extends Controller
         return $this->render('MyFrontendBundle:Default:members.html.twig');
     }
 
+    /**
+     * @Route("/contact")
+     */
+    public function contactAction()
+    {
+        return $this->render('MyFrontendBundle:Default:contact.html.twig');
+    }
 
 }

@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-Hello World!
+{#Hello World!#}
 
-<a href="{{ path('tasks_new') }}"> Login</a>
+{#<a href="{{ path('tasks_new') }}"> Login</a>#}
 {# total items count #}
 <div class="count">
-    {{ pagination.getTotalItemCount }}
+    {#{{ pagination.getTotalItemCount }}#}
 </div>
-
+<div class="col-md-12">
 <table>
     <tr>
          {#sorting of properties based on query components#}
-        <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</th>
-        <th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}</th>
+        {#<th>{{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</th>#}
+        {#<th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}</th>#}
         {#<th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Description', 'a.description') }}</th>#}
         {#<th{% if pagination.isSorted('a.posted') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Posted', 'a.posted') }}</th>#}
 
@@ -21,21 +21,38 @@ Hello World!
 
     {# table body #}
     {% for article in pagination %}
-        <tr {% if loop.index is odd %}class="color"{% endif %}>
-            <td>{{ article.id }}</td>
-            <td>{{ article.title }}</td>
-            <td>{{ article.description }}</td>
-            <td>{{ article.posted|date('Y-m-d H:i:s') }}</td>
+        {#<tr {% if loop.index is odd %}class="color"{% endif %}>#}
+            {#<td>{{ article.id }}</td>#}
+            {#<td>{{ article.title }}</td>#}
+            {#<td>{{ article.description }}</td>#}
+            {#<td>{{ article.posted|date('Y-m-d H:i:s') }}</td>#}
 
-        </tr>
+        {#</tr>#}
+
+        <!-- Comment -->
+        <div class="media" style="border-bottom: dotted 2px;">
+            <div class="media-body">
+                <h4 class="media-heading">{{ article.title }}
+                    <small style="float: right">{{ article.posted|date('Y-m-d H:i:s') }}</small>
+                </h4>
+                <br/>
+                <br/>
+                    {{ article.description }}
+            </div>
+        </div>
+
+
+
     {% endfor %}
 </table>
-
-{# display navigation #}
-
-<div class="navigation" style="text-align: center;position:absolute;bottom:0;">
-    {{ knp_pagination_render(pagination) }}
 </div>
 
+<div class="col-md-12">
+{# display navigation #}
+
+<div class="navigation" style="text-align: center;bottom:0;">
+    {{ knp_pagination_render(pagination) }}
+</div>
+</div>
 
 {% endblock %}
