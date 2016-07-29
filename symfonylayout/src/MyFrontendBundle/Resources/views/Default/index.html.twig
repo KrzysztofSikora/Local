@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+Hello World!
+
+<a href="{{ path('tasks_new') }}"> Login</a>
+{# total items count #}
+<div class="count">
+    {{ pagination.getTotalItemCount }}
+</div>
+
+<table>
+    <tr>
+         {#sorting of properties based on query components#}
+        <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</th>
+        <th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}</th>
+        {#<th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Description', 'a.description') }}</th>#}
+
+    </tr>
+
+    {# table body #}
+    {% for article in pagination %}
+        <tr {% if loop.index is odd %}class="color"{% endif %}>
+            <td>{{ article.id }}</td>
+            <td>{{ article.title }}</td>
+            <td>{{ article.description }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{# display navigation #}
+
+<div class="navigation" style="text-align: center;position:absolute;bottom:0;">
+    {{ knp_pagination_render(pagination) }}
+</div>
+
+
+{% endblock %}
