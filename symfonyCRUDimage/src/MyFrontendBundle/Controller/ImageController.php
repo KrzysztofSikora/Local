@@ -3,6 +3,7 @@
 namespace MyFrontendBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -51,16 +52,11 @@ class ImageController extends Controller
 //            $em->flush();
 
 
-//            $finfo = finfo_open(FILEINFO_MIME_TYPE);
-//            $name = (basename($image));
-//            $mimeType = (finfo_file($finfo, $image));
-//            $binary = (base64_encode(file_get_contents($image)));
-//            finfo_close($finfo);
-//
+
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
             $i = $image->getFilename();
                 $file = $image;
-                $file->setFilename(basename($i));
+                $file->setFilename($i->getClientOriginalName());
                 $file->setMime(finfo_file($finfo, $i));
                 $file->setContents(base64_encode(file_get_contents($i)));
                 $em->persist($file);
@@ -71,27 +67,11 @@ class ImageController extends Controller
 
 
 
+
 //            $id = $image->getDescription();
-
-//                $i = $image->getFilename();
-//              $i->getMimeType() //mimeType
-//            $i->getClientOriginalName() // oryginalName
-
-            $binary = (base64_encode(file_get_contents($i)));
-            $k = (basename($i));
-//            $m = (finfo_file($finfo, $i));
-//            print_r( $i->getMimeType());
-            print_r( $i);
-
-
-
-//            $owner = 'własciciel';
-//            $description = 'opis';
-
-
-//            return $this->render('image/upload.html.twig', array ('owner' => $m));
-//                'description' => $description, 'name'=> $name, 'mimeType' => $mimeType,'binary' => $binary));
-
+//            $i = $image->getFilename();
+//            $i->getMimeType() //mimeType
+//            $i->all();
 
 
             return $this->redirectToRoute('image_show', array('id' => $image->getId()));
@@ -181,5 +161,27 @@ class ImageController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * Finds and displays a File entity.
+     *
+     * @Route("/download/{filename}", name="file_show")
+     */
+    public function displayAction($filename)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+//        $entity =  new Image();
+        $entity = $em->getRepository('MyFrontendBundle:Image')
+        ->findOneByFilename($filename);
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find File entity.');
+        }
+        $response = new Response();
+        $response->setContent(base64_decode($entity->getContents()));
+        $response->setStatusCode(200);
+        $response->headers->set('Content-Type', $entity->getMime());
+        return $response;
     }
 }
