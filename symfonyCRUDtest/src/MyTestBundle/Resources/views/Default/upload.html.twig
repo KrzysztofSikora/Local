@@ -8,4 +8,7 @@ upload
 <br />
 {{ description }}
 <br />
-{{ image }}
+{{ image | join}}
+
+
+<img src='data:image/jpeg;base64,{{ image | join}}'/>

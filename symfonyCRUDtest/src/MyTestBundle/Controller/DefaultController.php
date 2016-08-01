@@ -33,10 +33,15 @@ class DefaultController extends Controller
             $owner = $request->request ->get('owner');
             $description = $request->request ->get('description');
             $image = $request->files ->get('myimage');
+//            $image = $request->files ->all();
 //           print_r($image);
+//            $imagee = file_get_contents($image);
+            $imagee = (base64_encode(file_get_contents($image)));
+
+
 
             return $this->render('MyTestBundle:Default:upload.html.twig', array ('owner' => $owner,
-                'description' => $description,'image' => $image));
+                'description' => $description,'image' => $imagee));
 //            $response = new Response(
 //                'Content',
 //                Response::HTTP_OK,
