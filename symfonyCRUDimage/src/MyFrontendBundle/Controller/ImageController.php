@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\Image;
 use MyFrontendBundle\Form\ImageType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
  * Image controller.
@@ -183,5 +184,11 @@ class ImageController extends Controller
         $response->setStatusCode(200);
         $response->headers->set('Content-Type', $entity->getMime());
         return $response;
+
+//        return $this->render('image/upload.html.twig', array(
+//            'mimeType' => $entity->getMime(),
+//            'content' => $entity->getContents()
+//
+//        ));
     }
 }

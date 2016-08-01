@@ -4,7 +4,7 @@ upload
 <br />
 
 {#{{ test| join }}#}
-{{ owner | join }}
+{#{{ owner | join }}#}
 <br />
 {#{{ description }}#}
 {#<br />#}
@@ -15,8 +15,8 @@ upload
 
 {#{{ name }}#}
 {#<br />#}
-{#{{ mimeType }}#}
+{{ mimeType }}
 {#<br />#}
+{{ content }}
 
-
-{#<img src='data:image/jpeg;base64,{{ binary | join}}'/>#}
+<img src='data:image/jpeg;base64,{{ content | join}}'/>

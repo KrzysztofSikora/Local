@@ -38,7 +38,7 @@ class Image
     /**
      * @var string
      *
-     * @ORM\Column(name="contents", type="string", length=255)
+     * @ORM\Column(name="contents", type="text")
      */
     private $contents;
 

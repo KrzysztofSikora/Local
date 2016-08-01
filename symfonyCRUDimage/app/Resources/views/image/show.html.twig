@@ -16,7 +16,9 @@
 
 
             <a href="{{ path('file_show', { 'filename': image.filename }) }}">ttt</a><br/>
-
+            {#<img src="{{ path('file_show', { 'filename': image.filename }) }}"> <br /><br />#}
+            {#<img src='data:image/jpeg;base64,{{ image.contents | join}}'/>#}
+            {#{{ image.contents }}#}
             {#<tr>#}
                 {#<th>Mime</th>#}
                 {#<td>{{ image.mime }}</td>#}
