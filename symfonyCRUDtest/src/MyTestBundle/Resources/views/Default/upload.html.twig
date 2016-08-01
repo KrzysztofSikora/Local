@@ -8,7 +8,15 @@ upload
 <br />
 {{ description }}
 <br />
-{{ image | join}}
+
+{{ binary | join}}
+
+<br />
+
+{{ name }}
+<br />
+{{ mimeType }}
+<br />
 
 
-<img src='data:image/jpeg;base64,{{ image | join}}'/>
+<img src='data:image/jpeg;base64,{{ binary | join}}'/>
