@@ -62,4 +62,25 @@ class DefaultController extends Controller
         return $this->render('MyFrontendBundle:Default:contact.html.twig');
     }
 
+    /**
+     * @Route("/gallery")
+     */
+
+    public function galleryAction(Request $request)
+    {
+        $em    = $this->get('doctrine.orm.entity_manager');
+        $dql   = "SELECT a FROM MyFrontendBundle:Image a";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            16/*limit per page*/
+        );
+
+        // parameters to template
+//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+        return $this->render('MyFrontendBundle:Default:gallery.html.twig', array('pagination' => $pagination));
+    }
 }

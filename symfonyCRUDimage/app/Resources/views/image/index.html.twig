@@ -21,7 +21,10 @@
                 <td><a href="{{ path('image_show', { 'id': image.id }) }}">{{ image.id }}</a></td>
                 <td>{{ image.filename }}</td>
                 <td>{{ image.mime }}</td>
-                <td>{{ image.contents }}</td>
+                {#<td>{{ image.contents }}</td>#}
+                <td><a href="{{ path('file_show', { 'filename': image.filename }) }}"><img
+                            src="{{ path('file_show', { 'filename': image.filename }) }}  " style="height: 250px"></a>
+                </td>
                 <td>{{ image.category }}</td>
                 <td>{{ image.description }}</td>
                 <td>

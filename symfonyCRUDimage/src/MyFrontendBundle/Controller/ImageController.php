@@ -66,15 +66,16 @@ class ImageController extends Controller
 
 
 
-
-
+//            $user = $this->getUser();
 
 //            $id = $image->getDescription();
 //            $i = $image->getFilename();
 //            $i->getMimeType() //mimeType
 //            $i->all();
 
-
+//            return $this->render('image/upload.html.twig', array(
+//                'content' => $user
+//            ));
             return $this->redirectToRoute('image_show', array('id' => $image->getId()));
 
         }
