@@ -18,9 +18,10 @@ class ImageType extends AbstractType
 //            ->add('filename')
 //            ->add('mime')
 //            ->add('contents')
-            ->add('filename', 'file')
+            ->add('filename', 'file', array('data_class' => null))
             ->add('category')
             ->add('description')
+            ->add('status')
         ;
     }
     

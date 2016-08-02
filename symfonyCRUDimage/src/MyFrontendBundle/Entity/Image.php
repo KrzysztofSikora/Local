@@ -57,6 +57,13 @@ class Image
     private $description;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="status", type="boolean")
+     */
+    private $status;
+    
+    /**
      * Get id
      *
      * @return integer 
@@ -179,5 +186,28 @@ class Image
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set status
+     *
+     * @param boolean $status
+     * @return Image
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return boolean 
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }

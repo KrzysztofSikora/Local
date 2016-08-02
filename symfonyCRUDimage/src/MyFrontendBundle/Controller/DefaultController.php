@@ -35,7 +35,9 @@ class DefaultController extends Controller
 
         // parameters to template
 //        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
         return $this->render('MyFrontendBundle:Default:index.html.twig', array('pagination' => $pagination));
+
     }
 
     /**
@@ -43,6 +45,8 @@ class DefaultController extends Controller
      */
     public function historyAction()
     {
+
+//        return $this->render('MyFrontendBundle:Default:history.html.twig') +
         return $this->render('MyFrontendBundle:Default:history.html.twig');
     }
 
@@ -82,5 +86,15 @@ class DefaultController extends Controller
         // parameters to template
 //        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
         return $this->render('MyFrontendBundle:Default:gallery.html.twig', array('pagination' => $pagination));
+    }
+
+
+
+    public function carouselAction()
+    {
+        return $this->render('MyFrontendBundle:Default:carousel.html.twig', array('test' => '2'));
+
+
+
     }
 }
