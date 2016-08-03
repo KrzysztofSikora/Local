@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h2></h2>
+    {#<h3>Album: {{ entity | join }}</h3>#}
+    <h4>Zdjęcia:</h4>
+
+    {#{{ entity.id }}#}
+    {#{{ entity.filenamee }}#}
+    {#{{ entity.contents }}#}
+
+    {#<div class="col-md-3">#}
+    {#<a href="{{ path('file_show', { 'filename': entity.filenamee }) }}" class="thumbnail" >#}
+    {#<img class= "img-responsive" src="{{ path('file_show', { 'filename': entity.filenamee }) }}" alt="..." style="height: 180px">#}
+    {#</a>#}
+    {#</div>#}
+    {% for e in entity %}
+
+        <div class="col-md-3">
+        <a href="{{ path('file_show', { 'filename': e.filename }) }}" class="thumbnail" >
+        <img class= "img-responsive" src="{{ path('file_show', { 'filename': e.filename }) }}" alt="..." style="height: 180px">
+        </a>
+        </div>
+
+    {% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+<ul>
+    {% for film in dane %}
+        <li>
+            <a href="{{ path('film_show', { 'id': film.id }) }}">
+                {{ film }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

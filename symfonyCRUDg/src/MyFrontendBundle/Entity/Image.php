@@ -44,17 +44,20 @@ class Image
 
     /**
      * @ORM\ManyToOne(targetEntity="Album", inversedBy="albumname")
+     * 
      */
  
     private $album;
 
+    
+    
     /**
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
-
+    
     /**
      * @var bool
      *
@@ -226,4 +229,6 @@ class Image
     {
         return $this->album;
     }
+
+    
 }
