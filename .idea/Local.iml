@@ -38,6 +38,8 @@
           <root url="phar://$MODULE_DIR$/symfony6/example/composer.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDtest/example/composer.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDback/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/example/composer.phar/" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/symfony2/example/composer.phar/" />
@@ -71,6 +73,8 @@
           <root url="phar://$MODULE_DIR$/symfony6/example/composer.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDtest/example/composer.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDback/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/example/composer.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
