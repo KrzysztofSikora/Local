@@ -167,7 +167,7 @@ class AlbumController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
 
 //        $entity =  new Image();
-        $entity = $em->getRepository('MyFrontendBundle:Image')
+        $entity = $em->getRepository('MyFrontendBundle:Album')
             ->findOneByFilenamee($filename);
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find File entity.');
