@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    <ul>
+        <li><a href="{{ path('contactdetails_index') }}">Contact Details</a></li>
+        <li><a href="{{ path('aktor_index') }}">Lista aktorów</a></li>
+        <li><a href="{{ path('film_index') }}">Lista filmów</a></li>
+    </ul>
+    {% block content %}
+    {% endblock %}
+{% endblock %}
+
+

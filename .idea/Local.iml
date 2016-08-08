@@ -40,6 +40,10 @@
           <root url="phar://$MODULE_DIR$/symfonyCRUDback/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDgg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDgg/example/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonylayoutapk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonylayoutapk/example/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/symfony3apk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfony3apk/example/composer.phar/" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/symfony2/example/composer.phar/" />
@@ -75,6 +79,10 @@
           <root url="phar://$MODULE_DIR$/symfonyCRUDback/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDgg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDgg/example/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonylayoutapk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfonylayoutapk/example/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/symfony3apk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/symfony3apk/example/composer.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
