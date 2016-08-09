@@ -122,4 +122,12 @@ class Contacts
     {
         return $this->id;
     }
+    public function __toString()
+    {
+        $s = $this->getId();
+        $k = $this->getFirstname();
+        $z = $this->getLastname();
+        return "$s $k $z";
+    }
+    
 }
