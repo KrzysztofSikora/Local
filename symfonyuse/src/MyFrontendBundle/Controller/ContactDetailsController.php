@@ -8,7 +8,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\ContactDetails;
 use MyFrontendBundle\Form\ContactDetailsType;
-use MyFrontendBundle\Form\ContactDetailsType2;
 
 /**
  * ContactDetails controller.
@@ -59,30 +58,7 @@ class ContactDetailsController extends Controller
             'form' => $form->createView(),
         ));
     }
-    /**
-     * @Route("/value?id={id}&contact={contact}", name="contact_value")
-     *@Method({"GET", "POST"})
-     */
-    public function valueAction(Request $request, $id, $contact)
-    {
-        
-        $detail = $id;
-        $d = $contact;
 
-
-        $contactDetail = new ContactDetails();
-        $form = $this->createForm('MyFrontendBundle\Form\ContactDetailsType2', $contactDetail);
-        $form->handleRequest($request);
-
-
-
-        return $this->render('contactdetails/newvalue.html.twig', array(
-            'contactdetail' => $contactDetail,
-            'detail' => $detail,
-            'contact' => $d,
-            'form' => $form->createView(),
-        ));
-    }
 
     /**
      * Finds and displays a ContactDetails entity.
@@ -92,11 +68,11 @@ class ContactDetailsController extends Controller
      */
     public function showAction(ContactDetails $contactDetail)
     {
-        $deleteForm = $this->createDeleteForm($contactDetail);
+//        $deleteForm = $this->createDeleteForm($contactDetail);
 
         return $this->render('contactdetails/show.html.twig', array(
             'contactDetail' => $contactDetail,
-            'delete_form' => $deleteForm->createView(),
+//            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -108,7 +84,7 @@ class ContactDetailsController extends Controller
      */
     public function editAction(Request $request, ContactDetails $contactDetail)
     {
-        $deleteForm = $this->createDeleteForm($contactDetail);
+//        $deleteForm = $this->createDeleteForm($contactDetail);
         $editForm = $this->createForm('MyFrontendBundle\Form\ContactDetailsType2', $contactDetail);
         $editForm->handleRequest($request);
 
@@ -123,43 +99,43 @@ class ContactDetailsController extends Controller
         return $this->render('contactdetails/edit.html.twig', array(
             'contactDetail' => $contactDetail,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+//            'delete_form' => $deleteForm->createView(),
         ));
     }
 
-    /**
-     * Deletes a ContactDetails entity.
-     *
-     * @Route("/{id}", name="contactdetails_delete")
-     * @Method("DELETE")
-     */
-    public function deleteAction(Request $request, ContactDetails $contactDetail)
-    {
-        $form = $this->createDeleteForm($contactDetail);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($contactDetail);
-            $em->flush();
-        }
-
-        return $this->redirectToRoute('contactdetails_index');
-    }
-
-    /**
-     * Creates a form to delete a ContactDetails entity.
-     *
-     * @param ContactDetails $contactDetail The ContactDetails entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(ContactDetails $contactDetail)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('contactdetails_delete', array('id' => $contactDetail->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
-    }
+//    /**
+//     * Deletes a ContactDetails entity.
+//     *
+//     * @Route("/{id}", name="contactdetails_delete")
+//     * @Method("DELETE")
+//     */
+//    public function deleteAction(Request $request, ContactDetails $contactDetail)
+//    {
+//        $form = $this->createDeleteForm($contactDetail);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $em = $this->getDoctrine()->getManager();
+//            $em->remove($contactDetail);
+//            $em->flush();
+//        }
+//
+//        return $this->redirectToRoute('contactdetails_index');
+//    }
+//
+//    /**
+//     * Creates a form to delete a ContactDetails entity.
+//     *
+//     * @param ContactDetails $contactDetail The ContactDetails entity
+//     *
+//     * @return \Symfony\Component\Form\Form The form
+//     */
+//    private function createDeleteForm(ContactDetails $contactDetail)
+//    {
+//        return $this->createFormBuilder()
+//            ->setAction($this->generateUrl('contactdetails_delete', array('id' => $contactDetail->getId())))
+//            ->setMethod('DELETE')
+//            ->getForm()
+//        ;
+//    }
 }

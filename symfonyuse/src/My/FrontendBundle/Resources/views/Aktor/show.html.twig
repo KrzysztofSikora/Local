@@ -1,8 +1,0 @@
-{% extends "::layout.html.twig" %}
-
-{% block content %}
-    <h2>Szczegółowe dane aktora</h2>
-    <h3>Imię i nazwisko: {{ entity }}</h3>
-    <h4>Filmy, w których aktor zagrał:</h4>
-    {% include 'MyFrontendBundle:Film:_list.html.twig' with {'dane': entity.filmy } %}
-{% endblock %}
