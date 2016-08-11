@@ -8,29 +8,31 @@
             <tr>
                 {#<th>Isdeleted</th>#}
                 <th>Id</th>
-                <th>Value</th>
+                <th>Id kontaktu</th>
+                <th>Imię i nazwisko</th>
+                <th>Rodzaj kontaktu</th>
 
             </tr>
         </thead>
         <tbody>
         {% for contactDetail in contactDetails %}
             <tr>
-                {#<td><a href="{{ path('contactdetails_show', { 'id': contactDetail.id }) }}">{{ contactDetail.isDeleted }}</a></td>#}
+
                 <td>{{ contactDetail.id }}</td>
+                <td>{{ contactDetail.contact.id }}</td>
                 <td>{{ contactDetail.contact }}</td>
                 {#<td>{{ contactDetail.value }}</td>#}
                 <td>{{ contactDetail.fieldType.fieldType }}</td>
+                <td>{{ contactDetail.fieldType.id }}</td>
+                {#<td>{% if contactDetail.contact.isDeleted %}Usunięty{% else %}Nie usunięty{% endif %}</td>#}
 
                 {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('contactdetails_show', { 'id': contactDetail.id }) }}">show</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">edit</a>#}
-                        {#</li>#}
-                    {#</ul>#}
+                    {#<a href="{{ path('contact_value', { 'id': contactDetail.fieldType.id, 'contact': contactDetail.contact.id }) }}">Dodaj</a>#}
                 {#</td>#}
+                <td>
+                    <a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">edit</a>
+
+                </td>
             </tr>
         {% endfor %}
         </tbody>

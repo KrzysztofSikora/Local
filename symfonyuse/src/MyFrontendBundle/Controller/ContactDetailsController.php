@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\ContactDetails;
 use MyFrontendBundle\Form\ContactDetailsType;
+use MyFrontendBundle\Form\ContactDetailsType2;
 
 /**
  * ContactDetails controller.
@@ -58,6 +59,30 @@ class ContactDetailsController extends Controller
             'form' => $form->createView(),
         ));
     }
+    /**
+     * @Route("/value?id={id}&contact={contact}", name="contact_value")
+     *@Method({"GET", "POST"})
+     */
+    public function valueAction(Request $request, $id, $contact)
+    {
+        
+        $detail = $id;
+        $d = $contact;
+
+
+        $contactDetail = new ContactDetails();
+        $form = $this->createForm('MyFrontendBundle\Form\ContactDetailsType2', $contactDetail);
+        $form->handleRequest($request);
+
+
+
+        return $this->render('contactdetails/newvalue.html.twig', array(
+            'contactdetail' => $contactDetail,
+            'detail' => $detail,
+            'contact' => $d,
+            'form' => $form->createView(),
+        ));
+    }
 
     /**
      * Finds and displays a ContactDetails entity.
@@ -84,7 +109,7 @@ class ContactDetailsController extends Controller
     public function editAction(Request $request, ContactDetails $contactDetail)
     {
         $deleteForm = $this->createDeleteForm($contactDetail);
-        $editForm = $this->createForm('MyFrontendBundle\Form\ContactDetailsType', $contactDetail);
+        $editForm = $this->createForm('MyFrontendBundle\Form\ContactDetailsType2', $contactDetail);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

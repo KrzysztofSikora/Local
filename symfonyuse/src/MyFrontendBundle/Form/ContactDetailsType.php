@@ -14,6 +14,8 @@ class ContactDetailsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
+
         $builder
 
             
@@ -26,7 +28,12 @@ class ContactDetailsType extends AbstractType
             ->add('contact', null, array(
 
                 'label'  => 'Wybierz osobę',
-            ));
+            ))
+        ->add('value','hidden', array(
+        'data' => 0))
+
+        ->add('isDeleted', 'hidden', array(
+            'data' => 0));
 
 //        ->add('task', null, array('max_length' => 4))
 
