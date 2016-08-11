@@ -70,29 +70,7 @@
 
         }
 
-        #topbarL {
-            float: left;
-            text-align: center;
-            border-right: 2px dotted #cccccc;
-            /*width: 15%;*/
-            /*padding: 20px;*/
 
-
-        }
-
-        #topbarR {
-            float: left;
-            padding: 20px;
-            font-size: 16px;
-            text-align: justify;
-
-        }
-
-        .bigtitle {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
 
         #sidebarrow {
             background-color: #dedede;
@@ -101,23 +79,12 @@
             margin-left: 0px;
         }
 
-        #sidebar {
-            /*width: 15%;*/
-            border-right: 2px dotted #666666;
-            min-height: 730px;
-            text-align: center;
-            padding: 20px;
-            font-size: 18px;
-            background-color: lightgray;
-
-
-        }
 
         #content > p {
-            font-size: 16px;
+            /*font-size: 16px;*/
         }
         #content {
-            float:left;
+            /*float:left;*/
             /*margin: 2em;*/
             /*width: 730px;*/
             background-color: #dedede;
@@ -220,10 +187,11 @@
 
         {#</div>#}
 
-        <div id="content" class="col-md-9">
+        <div id="content" class="col-md-12">
+            <div class="row">
 
             {% block body %}{% endblock %}
-
+            </div>
         </div>
     </div>
     <div id="footer">
