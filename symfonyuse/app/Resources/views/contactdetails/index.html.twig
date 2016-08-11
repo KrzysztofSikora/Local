@@ -7,32 +7,31 @@
         <thead>
             <tr>
                 {#<th>Isdeleted</th>#}
-                <th>Id</th>
-                <th>Id kontaktu</th>
-                <th>Imię i nazwisko</th>
-                <th>Rodzaj kontaktu</th>
+                <th><div class="col-md-3"><p>Osoba</p></div></th>
+                <th><div class="col-md-6"><p>Kontakt</p></div></th>
 
             </tr>
         </thead>
         <tbody>
         {% for contactDetail in contactDetails %}
             <tr>
+                <td><div class="col-md-3"><p>{{ contactDetail.contact }}</p></div></td>
+                {#<td><div class="col-md-6"><p>{{ contactDetail.value }}</p></div></td>#}
+                <td>{% if contactDetail.value == '0' or contactDetail.value == null %}
+                        Brak kontaktu
 
-                <td>{{ contactDetail.id }}</td>
-                <td>{{ contactDetail.contact.id }}</td>
-                <td>{{ contactDetail.contact }}</td>
-                {#<td>{{ contactDetail.value }}</td>#}
-                <td>{{ contactDetail.fieldType.fieldType }}</td>
-                <td>{{ contactDetail.fieldType.id }}</td>
+
+                    {% else %}{{ contactDetail.value }}{% endif %}</td>
+                {#<td>{{ contactDetail.fieldType.fieldType }}</td>#}
                 {#<td>{% if contactDetail.contact.isDeleted %}Usunięty{% else %}Nie usunięty{% endif %}</td>#}
 
                 {#<td>#}
                     {#<a href="{{ path('contact_value', { 'id': contactDetail.fieldType.id, 'contact': contactDetail.contact.id }) }}">Dodaj</a>#}
                 {#</td>#}
-                <td>
-                    <a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">Dodaj kontakt</a>
-
-                </td>
+                <td><div class="col-md-3">
+                    <p><a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">Dodaj kontakt</a>
+                        </p>
+                </div></td>
             </tr>
         {% endfor %}
         </tbody>
@@ -40,7 +39,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('contactdetails_new') }}">Dodaj rodzaj kontaktu</a>
+            <a href="{{ path('contactdetails_new') }}">Dodaj nowy kontakt</a>
         </li>
     </ul>
 {% endblock %}

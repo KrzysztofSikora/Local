@@ -20,8 +20,8 @@ class ContactsType extends AbstractType
 //        $builder->getData();
         $builder
             ->add('isDeleted', 'hidden', array('data'=> 0))
-            ->add('firstname', null, array('required' => true))
-            ->add('lastname', null, array('required' => true))
+            ->add('firstname', null, array('required' => true, 'label' => 'Imię'))
+            ->add('lastname', null, array('required' => true, 'label' => 'Nazwisko'))
 
         ;
     }

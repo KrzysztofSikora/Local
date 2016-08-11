@@ -6,9 +6,10 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Imie</th>
-                <th>Nazwisko</th>
+                <th><div class="col-md-3"></div> </th>
+                <th><div class="col-md-3"><p>Imie</p></div></th>
+                <th><div class="col-md-3"><p>Nazwisko</p></div></th>
+                <th><div class="col-md-3"></div> </th>
 
             </tr>
         </thead>
@@ -18,9 +19,10 @@
 
 
             <tr>
-                <td>{{ contact.id }}</td>
-                <td>{{ contact.firstname }}</td>
-                <td>{{ contact.lastname }}</td>
+                <th><div class="col-md-3"></div> </th>
+                <td><div class="col-md-3"><p>{{ contact.firstname }}</p></div></td>
+                <td><div class="col-md-9"><p>{{ contact.lastname }}</p></div></td>
+                <th><div class="col-md-3"></div> </th>
             </tr>
 
         {% endfor %}

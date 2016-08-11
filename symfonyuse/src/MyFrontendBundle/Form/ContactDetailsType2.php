@@ -47,7 +47,7 @@ class ContactDetailsType2 extends AbstractType
                 ))
                 ->add('contact', null, array(
 
-                    'label' => 'Wybrana soba:',
+                    'label' => 'Wybrana osoba:',
                     'disabled' => 'disabled'
                 ))
                 ->add('value', TextType::class, array('label' => 'Notatka:'))
@@ -65,7 +65,7 @@ class ContactDetailsType2 extends AbstractType
                 ))
                 ->add('contact', null, array(
 
-                    'label' => 'Wybrana soba:',
+                    'label' => 'Wybrana osoba:',
                     'disabled' => 'disabled'
                 ))
                 ->add('value', UrlType::class, array('label' => 'Adres Url:'))
@@ -84,7 +84,7 @@ class ContactDetailsType2 extends AbstractType
                 ))
                 ->add('contact', null, array(
 
-                    'label' => 'Wybrana soba:',
+                    'label' => 'Wybrana osoba:',
                     'disabled' => 'disabled'
                 ))
                 ->add('value', EmailType::class, array('label' => 'Email:'))
@@ -104,7 +104,7 @@ class ContactDetailsType2 extends AbstractType
                 ))
                 ->add('contact', null, array(
 
-                    'label' => 'Wybrana soba:',
+                    'label' => 'Wybrana osoba:',
                     'disabled' => 'disabled'
                 ))
                 ->add('value', 'number', array('max_length' => 10, 'label' => 'Numer telefonu'))
