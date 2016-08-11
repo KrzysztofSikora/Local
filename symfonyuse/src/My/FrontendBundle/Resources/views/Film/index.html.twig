@@ -1,0 +1,6 @@
+{% extends "::layout.html.twig" %}
+
+{% block content %}
+    <h2>Lista wszystkich filmów</h2>
+    {% include 'MyFrontendBundle:Film:_list.html.twig' with {'dane': entities } %}
+{% endblock %}

@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\ContactDetails;
 use MyFrontendBundle\Form\ContactDetailsType;
+use MyFrontendBundle\Form\ContactDetailsType2;
 
 /**
  * ContactDetails controller.
@@ -96,6 +97,33 @@ class ContactDetailsController extends Controller
         }
 
         return $this->render('contactdetails/edit.html.twig', array(
+            'contactDetail' => $contactDetail,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Displays a form to edit an existing ContactDetails entity.
+     *
+     * @Route("/{id}/cont", name="cont_edit")
+     * @Method({"GET", "POST"})
+     */
+    public function contAction(Request $request, ContactDetails $contactDetail)
+    {
+        $deleteForm = $this->createDeleteForm($contactDetail);
+        $editForm = $this->createForm('MyFrontendBundle\Form\ContactDetailsType2', $contactDetail);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($contactDetail);
+            $em->flush();
+
+            return $this->redirectToRoute('cont_edit', array('id' => $contactDetail->getId()));
+        }
+
+        return $this->render('contactdetails/edit2.html.twig', array(
             'contactDetail' => $contactDetail,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

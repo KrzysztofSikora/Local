@@ -19,6 +19,7 @@ class ContactsType extends AbstractType
             ->add('isDeleted')
             ->add('firstname')
             ->add('lastname')
+//            ->add('fieldType')
 
         ;
     }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+</head>
+<body>
+
+
+<h2>Aplikacja typu CRUD - Edycja danych w tabelach</h2>
+<ul>
+    <li><a href="{{ path('contacts_index') }}">Dodaj osobę</a></li>
+    <li><a href="{{ path('contactdetails_index') }}">Dodaj rodzaj kontaktu</a></li>
+
+    {#<li><a href="{{ path('fieldtypes_index') }}">FieldTypes</a></li>#}
+</ul>
+{% block body %}{% endblock %}
+</body>
+</html>

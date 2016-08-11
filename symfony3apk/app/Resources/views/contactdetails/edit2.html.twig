@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ContactDetails edit</h1>
+    <h1> {{ contactDetail.fieldType.fieldType }}</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+
+        <input type="submit" value="Edit" />
+
+{#{% if contactDetail.value == null %}#}
+    <td>{% if contactDetail.fieldType.fieldType == 'phone' %}phoneeee
+            <input type="tel" pattern="[0-9]+[-][0-9]+[-][0-9]+"  id="contact_details_value" name="contact_details[value]" value="{{ contactDetail.value }}">
+
+        {% else %}{% endif %}</td>
+    <td>{% if contactDetail.fieldType.fieldType == 'mobile' %}mobileee
+            <input type="text" pattern="[0-9]+[-][0-9]+[-][0-9]+" id="contact_details_value" name="contact_details[value]" value="{{ contactDetail.value }}">
+
+        {% else %}{% endif %}</td>
+    <td>{% if contactDetail.fieldType.fieldType == 'homepage_uri' %}url
+            <input type="url" id="contact_details_value" name="contact_details[value]" value="{{ contactDetail.value }}">
+
+        {% else %}{% endif %}</td>
+    <td>{% if contactDetail.fieldType.fieldType == 'note' %}note
+            <input type="text" id="contact_details_value" name="contact_details[value]" value="{{ contactDetail.value }}">
+
+        {% else %}{% endif %}</td>
+    <td>{% if contactDetail.fieldType.fieldType == 'email' %}email
+            <input type="email" id="contact_details_value" name="contact_details[value]" value="{{ contactDetail.value }}">
+
+        {% else %}{% endif %}</td>
+
+{#{% endif %}#}
+    {#<input type="text" id="contact_details_value" name="contact_details[value]" maxlength="255" value="{{ contactDetail.value }}">#}
+    {#<input type="email" id="contact_details_value" name="contact_details[value]" value="{{ contactDetail.value }}">#}
+
+
+
+
+
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('contactdetails_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

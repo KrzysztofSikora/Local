@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contacts list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+           {% if contact.isDeleted != 1 %}
+
+
+            <tr>
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.firstname }}</td>
+                <td>{{ contact.lastname }}</td>
+                <td>{{ contact.isDeleted }}</td>
+                <td>
+
+                </td>
+            </tr>
+           {% else %}{% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('contacts_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

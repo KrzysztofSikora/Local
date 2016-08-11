@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ContactDetails</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Isdeleted</th>
+                <td>{% if contactDetail.isDeleted %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Value</th>
+                <td>{{ contactDetail.value }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ contactDetail.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('contactdetails_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

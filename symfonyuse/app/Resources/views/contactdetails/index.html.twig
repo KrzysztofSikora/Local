@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ContactDetails list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                {#<th>Isdeleted</th>#}
+                <th>Id</th>
+                <th>Value</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for contactDetail in contactDetails %}
+            <tr>
+                {#<td><a href="{{ path('contactdetails_show', { 'id': contactDetail.id }) }}">{{ contactDetail.isDeleted }}</a></td>#}
+                <td>{{ contactDetail.id }}</td>
+                <td>{{ contactDetail.contact }}</td>
+                {#<td>{{ contactDetail.value }}</td>#}
+                <td>{{ contactDetail.fieldType.fieldType }}</td>
+
+                {#<td>#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('contactdetails_show', { 'id': contactDetail.id }) }}">show</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">edit</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('contactdetails_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

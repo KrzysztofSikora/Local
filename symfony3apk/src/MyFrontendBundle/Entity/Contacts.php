@@ -129,5 +129,6 @@ class Contacts
         $z = $this->getLastname();
         return "$s $k $z";
     }
-    
+
+
 }

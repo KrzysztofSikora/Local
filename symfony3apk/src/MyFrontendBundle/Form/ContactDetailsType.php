@@ -12,6 +12,8 @@ use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\RangeType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 
 
@@ -31,66 +33,45 @@ class ContactDetailsType extends AbstractType
 
 
 
-        $entity = $builder->getData();
-//        $v = $entity->getID();
-        $v = $entity->getfieldtype() ->getID();
-        print_r($v);
-        $flag = $v;
+//        $entity = $builder->getData();
+////        $v = $entity->getID();
+//        $v = $entity->getValue();
+//        print_r($v);
+//        $flag = $v;
 
-//        if($flag ==1) {
-//        $builder
-//            ->add('isDeleted')
-//            ->add('value' ) // tutaj np. email class lub number class...
+
+        $builder
+            ->add('isDeleted')
+            ->add('value') // tutaj np. email class lub number class...
+
+            ->add('fieldType') // requires convert to string
+            ->add('contact') // requires convert to string
+        ;
+//        //SZUKAM POWIĄZANEGO FIELD TYPE i JEGO WARTOŚCI
+//        $fieldType = $builder->getData()->getId();
+//        print_r($fieldType);
+//       if ($fieldType == 3) {
 //
-//            ->add('fieldType') // requires convert to string
-//            ->add('contact') // requires convert to string
-//        ;
-//    } phone
-//        if($flag==2) {
-//        $builder
-//            ->add('isDeleted')
-//            ->add('value' => range(1,4))
+//                $builder
+//                    ->add('isDeleted')
+//                    ->add('fieldType')
+//                    ->add('contact')
+//                    ->add('value', TextType::class, [
+//                        'constraints' => [
+//                            //TWOJE WALIDACJE DLA DANEGO POLA
+//                            new \Symfony\Component\Validator\Constraints\NotBlank(),
+//                            new \Symfony\Component\Validator\Constraints\Email()
+//                        ],
+//                    ]);
 //
-//            )
-//
-//
-//            ->add('fieldType') // requires convert to string
-//            ->add('contact') // requires convert to string
-//        ;
-//
-//    } //mobile
-        if($flag==3) {
-            $builder
-                ->add('isDeleted')
-                ->add('value', EmailType::class ) // tutaj np. email class lub number class...
+////
+//        }
 
-                ->add('fieldType') // requires convert to string
-                ->add('contact') // requires convert to string
-            ;
 
-        }
 
-        if($flag==4) {
-            $builder
-                ->add('isDeleted')
-                ->add('value', UrlType::class ) // tutaj np. email class lub number class...
 
-                ->add('fieldType') // requires convert to string
-                ->add('contact') // requires convert to string
-            ;
 
-        } //homepage
 
-        if($flag==5) {
-            $builder
-                ->add('isDeleted')
-                ->add('value') // tutaj np. email class lub number class...
-
-                ->add('fieldType') // requires convert to string
-                ->add('contact') // requires convert to string
-            ;
-
-        }
     }
     
     /**
