@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>ContactDetails list</h1>
+    <h1>Lista szczegółowa</h1>
 
     <table>
         <thead>
@@ -30,7 +30,7 @@
                     {#<a href="{{ path('contact_value', { 'id': contactDetail.fieldType.id, 'contact': contactDetail.contact.id }) }}">Dodaj</a>#}
                 {#</td>#}
                 <td>
-                    <a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">edit</a>
+                    <a href="{{ path('contactdetails_edit', { 'id': contactDetail.id }) }}">Dodaj kontakt</a>
 
                 </td>
             </tr>
@@ -40,7 +40,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('contactdetails_new') }}">Create a new entry</a>
+            <a href="{{ path('contactdetails_new') }}">Dodaj rodzaj kontaktu</a>
         </li>
     </ul>
 {% endblock %}

@@ -21,14 +21,17 @@ class ContactDetailsType extends AbstractType
             
 //            ->add('fieldType')
 
-            ->add('fieldType', null, array(
+            ->add('fieldType', null,  array(
 
-                'label'  => 'Wybierz rodzaj kontaktu',
+                'label'  => 'Wybierz rodzaj kontaktu', 'required' =>true
             ))
             ->add('contact', null, array(
 
-                'label'  => 'Wybierz osobę',
+                'label'  => 'Wybierz osobę','required' =>true
             ))
+
+
+
         ->add('value','hidden', array(
         'data' => 0))
 

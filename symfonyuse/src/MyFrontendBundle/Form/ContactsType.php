@@ -5,6 +5,8 @@ namespace MyFrontendBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\NotNull;
 
 class ContactsType extends AbstractType
 {
@@ -15,11 +17,11 @@ class ContactsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-        $builder->getData();
+//        $builder->getData();
         $builder
-            ->add('isDeleted')
-            ->add('firstname')
-            ->add('lastname')
+            ->add('isDeleted', 'hidden', array('data'=> 0))
+            ->add('firstname', null, array('required' => true))
+            ->add('lastname', null, array('required' => true))
 
         ;
     }

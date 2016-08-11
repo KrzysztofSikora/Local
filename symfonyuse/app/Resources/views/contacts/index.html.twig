@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Contacts list</h1>
+    <h1>Lista wszystkich kontaktów</h1>
 
     <table>
         <thead>
@@ -9,7 +9,6 @@
                 <th>Id</th>
                 <th>Imie</th>
                 <th>Nazwisko</th>
-                <th>Status</th>
 
             </tr>
         </thead>
@@ -22,9 +21,6 @@
                 <td>{{ contact.id }}</td>
                 <td>{{ contact.firstname }}</td>
                 <td>{{ contact.lastname }}</td>
-                <td>{{ contact.isDeleted }}</td>
-                <td>{% if contact.isDeleted %}Usunięty{% else %}Nie usunięty{% endif %}</td>
-
             </tr>
 
         {% endfor %}
@@ -33,7 +29,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('contacts_new') }}">Create a new entry</a>
+            <a href="{{ path('contacts_new') }}">Dodaj nową osobę</a>
         </li>
     </ul>
 {% endblock %}

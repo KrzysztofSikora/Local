@@ -18,10 +18,7 @@ class ContactDetailsType2 extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $entity = $builder->getData();
-//        $v = $entity->getID();
         $v = $entity->getFieldType()->getFieldType();
-        print_r($v);
-
         if ($v == 'mobile') {
 
             $builder
@@ -55,7 +52,7 @@ class ContactDetailsType2 extends AbstractType
                 ))
                 ->add('value', TextType::class, array('label' => 'Notatka:'))
                 ->add('isDeleted', 'hidden', array(
-                    'data' => 0));
+                    'data' => ''));
         }
 
         if ($v == 'homepage_uri') {
