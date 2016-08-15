@@ -192,4 +192,15 @@ class ImageController extends Controller
 //
 //        ));
     }
+    public function carouselAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $images = $em->getRepository('MyFrontendBundle:Image')->findAll();
+
+        return $this->render('MyFrontendBundle:Default:carousel.html.twig', array(
+            'images' => $images,
+        ));
+    }
+    
 }

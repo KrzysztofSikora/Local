@@ -90,13 +90,13 @@ class DefaultController extends Controller
 
 
 
-    public function carouselAction()
-    {
-        return $this->render('MyFrontendBundle:Default:carousel.html.twig', array('test' => '2'));
-
-
-
-    }
+//    public function carouselAction()
+//    {
+//        return $this->render('MyFrontendBundle:Default:carousel.html.twig', array('test' => '2'));
+//
+//
+//
+//    }
 
     /**
      * @Route("/panel")

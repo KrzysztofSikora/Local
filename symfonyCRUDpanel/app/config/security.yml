@@ -52,6 +52,6 @@ security:
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
         - { path: ^/tasks/, role: ROLE_SUPER_ADMIN }
-        - { path: ^/image/, role: ROLE_SUPER_ADMIN }
-        - { path: ^/album/, role: ROLE_SUPER_ADMIN }
+        - { path: ^/image$, role: ROLE_SUPER_ADMIN }
+        - { path: ^/album$, role: ROLE_SUPER_ADMIN }
         - { path: ^/panel, role: ROLE_SUPER_ADMIN }
