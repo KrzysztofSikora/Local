@@ -21,8 +21,10 @@
             <tr>
                 <td><a href="{{ path('squad_show', { 'id': squad.id }) }}">{{ squad.id }}</a></td>
                 <td>{{ squad.filenameee }}</td>
-                <td>{{ squad.mimeee }}</td>
-                <td>{{ squad.contentsss }}</td>
+                <td><a href="{{ path('fileee_show', { 'filename': squad.filenameee }) }}"><img
+                                src="{{ path('fileee_show', { 'filename': squad.filenameee }) }}  " style="height: 250px"></a>
+                {#<td>{{ squad.mimeee }}</td>#}
+                {#<td>{{ squad.contentsss }}</td>#}
                 <td>{{ squad.descriptionnn }}</td>
                 <td>{{ squad.name }}</td>
                 <td>{{ squad.info }}</td>

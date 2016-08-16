@@ -19,8 +19,10 @@
             <tr>
                 <td><a href="{{ path('album_show', { 'id': album.id }) }}">{{ album.id }}</a></td>
                 <td>{{ album.filenamee }}</td>
-                <td>{{ album.mimee }}</td>
-                <td>{{ album.contentss }}</td>
+                <td><a href="{{ path('filee_show', { 'filename': album.filenamee }) }}"><img
+                                src="{{ path('filee_show', { 'filename': album.filenamee }) }}  " style="height: 250px"></a>
+                {#<td>{{ album.mimee }}</td>#}
+                {#<td>{{ album.contentss }}</td>#}
                 <td>{{ album.descriptionn }}</td>
                 <td>
                     <ul>
