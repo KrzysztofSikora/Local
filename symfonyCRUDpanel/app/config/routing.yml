@@ -1,3 +1,7 @@
+my_frontend_squad:
+    resource: "@MyFrontendBundle/Controller/SquadController.php"
+    type:     annotation
+
 my_frontend_album:
     resource: "@MyFrontendBundle/Controller/AlbumController.php"
     type:     annotation

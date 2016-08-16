@@ -50,13 +50,13 @@ class DefaultController extends Controller
         return $this->render('MyFrontendBundle:Default:history.html.twig');
     }
 
-    /**
-     * @Route("/members")
-     */
-    public function membersAction()
-    {
-        return $this->render('MyFrontendBundle:Default:members.html.twig');
-    }
+//    /**
+//     * @Route("/members")
+//     */
+//    public function membersAction()
+//    {
+//        return $this->render('MyFrontendBundle:Default:members.html.twig');
+//    }
 
     /**
      * @Route("/contact")
@@ -106,5 +106,29 @@ class DefaultController extends Controller
 
 //        return $this->render('MyFrontendBundle:Default:history.html.twig') +
         return $this->render('MyFrontendBundle:Default:panel.html.twig');
+    }
+    
+    
+    /**
+     * @Route("/members")
+     */
+    public function membersAction(Request $request)
+    {
+        $em    = $this->get('doctrine.orm.entity_manager');
+        $dql   = "SELECT a FROM MyFrontendBundle:Squad a";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            4/*limit per page*/
+        );
+
+        // parameters to template
+//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
+        return $this->render('MyFrontendBundle:Default:members.html.twig', array('pagination' => $pagination));
+
     }
 }
