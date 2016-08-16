@@ -55,3 +55,4 @@ security:
         - { path: ^/image$, role: ROLE_SUPER_ADMIN }
         - { path: ^/album$, role: ROLE_SUPER_ADMIN }
         - { path: ^/panel, role: ROLE_SUPER_ADMIN }
+        - { path: ^/squad$, role: ROLE_SUPER_ADMIN }
