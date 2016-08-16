@@ -43,7 +43,8 @@ class GalleryController extends Controller
         $entity = $em->getRepository('MyFrontendBundle:Image')->findByAlbum($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Brak filmu o podanym id!');
+//            throw $this->createNotFoundException('Brak filmu o podanym id!');
+
         }
 
 
