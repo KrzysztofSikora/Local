@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ImageType extends AbstractType
+class ImageTypeEdit extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -22,8 +22,8 @@ class ImageType extends AbstractType
 //            ->add('filename')
 //            ->add('mime')
 //            ->add('contents')
-            ->add('filename', 'file', array('data_class' => null))
-//            ->add('filename', 'hidden', array('data_class' => null))
+//            ->add('filename', 'file', array('data_class' => null))
+            ->add('filename', 'hidden', array('data_class' => null))
 //            ->add('album')
             ->add('description')
             ->add('status', null, array('label' => 'Karuzela'))

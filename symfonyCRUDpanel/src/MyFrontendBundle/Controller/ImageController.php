@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\Image;
 use MyFrontendBundle\Form\ImageType;
+use MyFrontendBundle\Form\ImageTypeEdit;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
@@ -111,7 +112,7 @@ class ImageController extends Controller
     public function editAction(Request $request, Image $image)
     {
         $deleteForm = $this->createDeleteForm($image);
-        $editForm = $this->createForm('MyFrontendBundle\Form\ImageType', $image);
+        $editForm = $this->createForm('MyFrontendBundle\Form\ImageTypeEdit', $image);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
