@@ -56,3 +56,5 @@ security:
         - { path: ^/album$, role: ROLE_SUPER_ADMIN }
         - { path: ^/panel, role: ROLE_SUPER_ADMIN }
         - { path: ^/squad$, role: ROLE_SUPER_ADMIN }
+        - { path: ^/carousel$, role: ROLE_SUPER_ADMIN }
+        - { path: ^/contact$, role: ROLE_SUPER_ADMIN }

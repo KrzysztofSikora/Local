@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contact list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cofilename</th>
+                <th>Conmime</th>
+                <th>Cocontents</th>
+                <th>Condescription</th>
+                <th>Conname</th>
+                <th>Tel</th>
+                <th>Meil</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
+                <td>{{ contact.cofilename }}</td>
+                <td>{{ contact.conmime }}</td>
+                {#<td>{{ contact.cocontents }}</td>#}
+                <td><a href="{{ path('confile_show', { 'filename': contact.cofilename }) }}"><img
+                                src="{{ path('confile_show', { 'filename': contact.cofilename }) }}  " style="height: 250px"></a>
+                <td>{{ contact.condescription }}</td>
+                <td>{{ contact.conname }}</td>
+                <td>{{ contact.tel }}</td>
+                <td>{{ contact.meil }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('contact_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

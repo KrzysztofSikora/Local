@@ -46,8 +46,15 @@ class DefaultController extends Controller
     public function historyAction()
     {
 
-//        return $this->render('MyFrontendBundle:Default:history.html.twig') +
-        return $this->render('MyFrontendBundle:Default:history.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $stories = $em->getRepository('MyFrontendBundle:Story')->findAll();
+
+        return $this->render('MyFrontendBundle:Default:history.html.twig', array(
+            'stories' => $stories,
+        ));
+
+
     }
 
 //    /**
@@ -59,11 +66,20 @@ class DefaultController extends Controller
 //    }
 
     /**
-     * @Route("/contact")
+     * @Route("/con")
      */
     public function contactAction()
     {
-        return $this->render('MyFrontendBundle:Default:contact.html.twig');
+
+        $em = $this->getDoctrine()->getManager();
+
+        $contacts = $em->getRepository('MyFrontendBundle:Contact')->findAll();
+
+        return $this->render('MyFrontendBundle:Default:contact.html.twig', array(
+            'contacts' => $contacts,
+        ));
+        
+
     }
 
     /**
@@ -107,6 +123,8 @@ class DefaultController extends Controller
 //        return $this->render('MyFrontendBundle:Default:history.html.twig') +
         return $this->render('MyFrontendBundle:Default:panel.html.twig');
     }
+
+
     
     
     /**

@@ -202,6 +202,16 @@ class ImageController extends Controller
         return $this->render('MyFrontendBundle:Default:carousel.html.twig', array(
             'images' => $images,
         ));
+
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $carousels = $em->getRepository('MyFrontendBundle:Carousel')->findAll();
+//
+//        return $this->render('carousel/index.html.twig', array(
+//            'carousels' => $carousels,
+//        ));
+
+
     }
     
 }

@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CarouselType extends AbstractType
+class ContactType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,10 +15,13 @@ class CarouselType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-//            ->add('cfilename')
-//            ->add('cmime')
-//            ->add('ccontents')
-            ->add('cfilename', 'file', array('data_class' => null))
+            ->add('cofilename', 'file', array('data_class' => null))
+//            ->add('conmime')
+//            ->add('cocontents', 'file', array('data_class' => null))
+            ->add('condescription')
+            ->add('conname')
+            ->add('tel')
+            ->add('meil')
         ;
     }
     
@@ -28,7 +31,7 @@ class CarouselType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'MyFrontendBundle\Entity\Carousel'
+            'data_class' => 'MyFrontendBundle\Entity\Contact'
         ));
     }
 }

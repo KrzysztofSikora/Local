@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CarouselType extends AbstractType
+class StoryType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -14,11 +14,11 @@ class CarouselType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $builder->getData();
         $builder
-//            ->add('cfilename')
-//            ->add('cmime')
-//            ->add('ccontents')
-            ->add('cfilename', 'file', array('data_class' => null))
+            ->add('paragraph')
+          
+            
         ;
     }
     
@@ -28,7 +28,7 @@ class CarouselType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'MyFrontendBundle\Entity\Carousel'
+            'data_class' => 'MyFrontendBundle\Entity\Story'
         ));
     }
 }

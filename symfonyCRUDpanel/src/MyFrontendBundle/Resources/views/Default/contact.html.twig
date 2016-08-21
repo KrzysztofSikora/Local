@@ -3,19 +3,61 @@
 {% block body %}
     <h1>Kontakt</h1>
 
-    <!-- Comment -->
-    <div class="media">
-        <a class="pull-left">
-            <img class="media-object" src="{{ asset('images/slawek.jpg') }}" width="128px">
-        </a>
-        <div class="media-body">
-            <h4 class="media-heading">Sławek Pacholski
-                <small>Głównodowodzący orkiestrą</small>
-            </h4>
-            tel : 66666666
-            e-mail: ssss@www.pl
+    {#<!-- Comment -->#}
+    {#<div class="media">#}
+        {#<a class="pull-left">#}
+            {#<img class="media-object" src="{ path('confile_show', { 'filename': contact.cofilename }) }" width="128px">#}
+        {#</a>#}
+        {#<div class="media-body">#}
+            {#<h4 class="media-heading">{{ contact.conname }}#}
+                {#<small>{{ contact.condescription }}</small>#}
+            {#</h4>#}
+            {#tel : {{ contact.tel }}#}
+            {#e-mail: {{ contact.meil }}#}
+        {#</div>#}
+    {#</div>#}
+
+
+    {% for contact in contacts %}
+        {#<tr>#}
+            {#<td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>#}
+            {#<td>{{ contact.cofilename }}</td>#}
+            {#<td>{{ contact.conmime }}</td>#}
+            {#<td>{{ contact.cocontents }}</td>#}
+            {#<td><a href="{{ path('confile_show', { 'filename': contact.cofilename }) }}"><img#}
+                            {#src="{{ path('confile_show', { 'filename': contact.cofilename }) }}  " style="height: 250px"></a>#}
+            {#<td>{{ contact.condescription }}</td>#}
+            {#<td>{{ contact.conname }}</td>#}
+            {#<td>{{ contact.tel }}</td>#}
+            {#<td>{{ contact.meil }}</td>#}
+            {#<td>#}
+                {#<ul>#}
+                    {#<li>#}
+                        {#<a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>#}
+                    {#</li>#}
+                    {#<li>#}
+                        {#<a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>#}
+                    {#</li>#}
+                {#</ul>#}
+            {#</td>#}
+        {#</tr>#}
+        <!-- Comment -->
+        <div class="media">
+            <a class="pull-left">
+                <img class="media-object" src="{{ path('confile_show', { 'filename': contact.cofilename }) }}" width="128px">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">{{ contact.conname }}
+                    <small>{{ contact.condescription }}</small>
+                </h4>
+                tel : {{ contact.tel }}
+                e-mail: {{ contact.meil }}
+            </div>
         </div>
-    </div>
+    {% endfor %}
+
+
+
 
 
 

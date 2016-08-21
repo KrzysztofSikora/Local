@@ -5,12 +5,12 @@ namespace MyFrontendBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * t
+ * Story
  *
- * @ORM\Table(name="t")
- * @ORM\Entity(repositoryClass="MyFrontendBundle\Repository\tRepository")
+ * @ORM\Table(name="story")
+ * @ORM\Entity(repositoryClass="MyFrontendBundle\Repository\StoryRepository")
  */
-class t
+class Story
 {
     /**
      * @var int
@@ -22,11 +22,11 @@ class t
     private $id;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="d", type="datetime")
+     * @ORM\Column(name="paragraph", type="text")
      */
-    private $d;
+    private $paragraph;
 
 
     /**
@@ -38,27 +38,28 @@ class t
     {
         return $this->id;
     }
+   
 
     /**
-     * Set d
+     * Set paragraph
      *
-     * @param \DateTime $d
-     * @return t
+     * @param string $paragraph
+     * @return Story
      */
-    public function setD($d)
+    public function setParagraph($paragraph)
     {
-        $this->d = $d;
+        $this->paragraph = $paragraph;
 
         return $this;
     }
 
     /**
-     * Get d
+     * Get paragraph
      *
-     * @return \DateTime 
+     * @return string 
      */
-    public function getD()
+    public function getParagraph()
     {
-        return $this->d;
+        return $this->paragraph;
     }
 }
