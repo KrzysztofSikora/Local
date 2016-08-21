@@ -1,3 +1,7 @@
+my_frontend_carousel:
+    resource: "@MyFrontendBundle/Controller/CarouselController.php"
+    type:     annotation
+
 my_frontend_squad:
     resource: "@MyFrontendBundle/Controller/SquadController.php"
     type:     annotation

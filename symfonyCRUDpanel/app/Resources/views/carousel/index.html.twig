@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Carousel list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cfilename</th>
+                <th>Cmime</th>
+                <th>Ccontents</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carousel in carousels %}
+            <tr>
+                <td><a href="{{ path('carousel_show', { 'id': carousel.id }) }}">{{ carousel.id }}</a></td>
+                <td>{{ carousel.cfilename }}</td>
+                {#<td>{{ carousel.cmime }}</td>#}
+                {#<td>{{ carousel.ccontents }}</td>#}
+                <td><a href="{{ path('cfile_show', { 'filename': carousel.cfilename }) }}"><img
+                                src="{{ path('cfile_show', { 'filename': carousel.cfilename }) }}  " style="height: 250px"></a>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('carousel_show', { 'id': carousel.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('carousel_edit', { 'id': carousel.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('carousel_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

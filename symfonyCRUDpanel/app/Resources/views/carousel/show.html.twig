@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Carousel</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ carousel.id }}</td>
+            </tr>
+            <tr>
+                <th>Cfilename</th>
+                <td>{{ carousel.cfilename }}</td>
+            </tr>
+            <tr>
+                <th>Cmime</th>
+                <td>{{ carousel.cmime }}</td>
+            </tr>
+            <tr>
+                <th>Ccontents</th>
+                <td>{{ carousel.ccontents }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('carousel_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('carousel_edit', { 'id': carousel.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

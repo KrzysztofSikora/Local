@@ -4,16 +4,19 @@
 
         {% set it = 0 %}
         {% for image in images %}
-            {% if image.status == 1 %}
+            {#{% if image.status == 1 %}#}
                 {% set it = it + 1 %}
                 {% if it == 1 %}
                     {#{{ loop.index }}#}
                     {#{{ image.id }}#}
                     {#{{ it }}#}
 
+        {#<td><a href="{{ path('cfile_show', { 'filename': carousel.cfilename }) }}"><img#}
+                        {#src="{{ path('cfile_show', { 'filename': carousel.cfilename }) }}  " style="height: 250px"></a>#}
+
                     <div class="item active">
                         <img class="first-slide" style="margin: auto"
-                             src="{{ path('file_show', { 'filename': image.filename }) }}" alt="First slide">
+                             src="{{ path('cfile_show', { 'filename': image.cfilename }) }}" alt="First slide">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1></h1>
@@ -26,7 +29,7 @@
                 {% else %}
                     <div class="item">
                         <img class="second-slide" style="margin: auto"
-                             src="{{ path('file_show', { 'filename': image.filename }) }}" alt="Second slide">
+                             src="{{ path('file_show', { 'filename': image.cfilename }) }}" alt="Second slide">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1></h1>
@@ -35,7 +38,7 @@
                             </div>
                         </div>
                     </div>{% endif %}
-            {% else %}{% endif %}
+            {#{% else %}{% endif %}#}
         {% endfor %}
 
 

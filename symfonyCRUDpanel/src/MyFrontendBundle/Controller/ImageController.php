@@ -197,7 +197,7 @@ class ImageController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $images = $em->getRepository('MyFrontendBundle:Image')->findAll();
+        $images = $em->getRepository('MyFrontendBundle:Carousel')->findAll();
 
         return $this->render('MyFrontendBundle:Default:carousel.html.twig', array(
             'images' => $images,
