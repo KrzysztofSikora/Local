@@ -47,6 +47,7 @@ class Tasks
      * @var \DateTime
      *
      * @ORM\Column(name="posted", type="datetime")
+     *
      */
     private $posted;
 

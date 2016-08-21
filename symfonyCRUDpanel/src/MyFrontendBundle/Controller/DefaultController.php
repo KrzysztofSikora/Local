@@ -23,7 +23,7 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $em    = $this->get('doctrine.orm.entity_manager');
-        $dql   = "SELECT a FROM MyFrontendBundle:Tasks a";
+        $dql   = "SELECT a FROM MyFrontendBundle:Tasks a ORDER By a.posted DESC";
         $query = $em->createQuery($dql);
 
         $paginator  = $this->get('knp_paginator');
@@ -78,7 +78,7 @@ class DefaultController extends Controller
         return $this->render('MyFrontendBundle:Default:contact.html.twig', array(
             'contacts' => $contacts,
         ));
-        
+
 
     }
 
