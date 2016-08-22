@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\Contact;
 use MyFrontendBundle\Form\ContactType;
+use MyFrontendBundle\Form\ContactTypeEdit;
 
 /**
  * Contact controller.
@@ -98,7 +99,7 @@ class ContactController extends Controller
     public function editAction(Request $request, Contact $contact)
     {
         $deleteForm = $this->createDeleteForm($contact);
-        $editForm = $this->createForm('MyFrontendBundle\Form\ContactType', $contact);
+        $editForm = $this->createForm('MyFrontendBundle\Form\ContactTypeEdit', $contact);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

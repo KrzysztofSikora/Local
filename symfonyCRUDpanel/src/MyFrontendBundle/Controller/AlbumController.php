@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\Album;
 use MyFrontendBundle\Form\AlbumType;
+use MyFrontendBundle\Form\AlbumTypeEdit;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -101,7 +102,7 @@ class AlbumController extends Controller
     public function editAction(Request $request, Album $album)
     {
         $deleteForm = $this->createDeleteForm($album);
-        $editForm = $this->createForm('MyFrontendBundle\Form\AlbumType', $album);
+        $editForm = $this->createForm('MyFrontendBundle\Form\AlbumTypeEdit', $album);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

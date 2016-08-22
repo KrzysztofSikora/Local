@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\Squad;
 use MyFrontendBundle\Form\SquadType;
+use MyFrontendBundle\Form\SquadTypeEdit;
 
 /**
  * Squad controller.
@@ -107,7 +108,7 @@ class SquadController extends Controller
     public function editAction(Request $request, Squad $squad)
     {
         $deleteForm = $this->createDeleteForm($squad);
-        $editForm = $this->createForm('MyFrontendBundle\Form\SquadType', $squad);
+        $editForm = $this->createForm('MyFrontendBundle\Form\SquadTypeEdit', $squad);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

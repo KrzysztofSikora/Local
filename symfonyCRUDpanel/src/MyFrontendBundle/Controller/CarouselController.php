@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use MyFrontendBundle\Entity\Carousel;
 use MyFrontendBundle\Form\CarouselType;
+use MyFrontendBundle\Form\CarouselTypeEdit;
 
 /**
  * Carousel controller.
@@ -97,7 +98,7 @@ class CarouselController extends Controller
     public function editAction(Request $request, Carousel $carousel)
     {
         $deleteForm = $this->createDeleteForm($carousel);
-        $editForm = $this->createForm('MyFrontendBundle\Form\CarouselType', $carousel);
+        $editForm = $this->createForm('MyFrontendBundle\Form\CarouselTypeEdit', $carousel);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
