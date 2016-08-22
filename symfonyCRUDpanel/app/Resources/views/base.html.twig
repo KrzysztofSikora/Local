@@ -92,7 +92,26 @@
 
         .fb:hover {
             background-color: #4668b3;
+            -webkit-transition: all 600ms ease-out;
+            -moz-transition: all 600ms ease-out;
+            -o-transition: all 600ms ease-out;
+            transition: all 600ms ease-out;
+
         }
+
+        /*.info{*/
+            /*display: none;*/
+
+        /*}*/
+        /*.yt:hover>.info {*/
+            /*display: block;*/
+        /*}*/
+        /*.yt:hover > a > i {*/
+            /*display: none;*/
+        /*}*/
+
+
+
 
         .yt {
             /*width: 50%;*/
@@ -102,6 +121,10 @@
 
         .yt:hover {
             background-color: #d94348;
+            -webkit-transition: all 600ms ease-out;
+            -moz-transition: all 600ms ease-out;
+            -o-transition: all 600ms ease-out;
+            transition: all 600ms ease-out;
         }
 
         .tw {
@@ -113,6 +136,10 @@
 
         .tw:hover {
             background-color: #3095d3;
+            -webkit-transition: all 600ms ease-out;
+            -moz-transition: all 600ms ease-out;
+            -o-transition: all 600ms ease-out;
+            transition: all 600ms ease-out;
         }
 
         .gplus {
@@ -133,6 +160,10 @@
 
         .gplus:hover {
             background-color: #d95333;
+            -webkit-transition: all 600ms ease-out;
+            -moz-transition: all 600ms ease-out;
+            -o-transition: all 600ms ease-out;
+            transition: all 600ms ease-out;
         }
 
         .sticky {
@@ -437,7 +468,7 @@
         <div class="row">
             <div class="col-md-2">
             </div>
-            <div id="content" class="col-md-8" style="min-height: 600px">
+            <div id="content" class="col-md-8" style="min-height: 600px; margin-top: 25px;margin-bottom:25px">
 
 
                 {% block body %}{% endblock %}
