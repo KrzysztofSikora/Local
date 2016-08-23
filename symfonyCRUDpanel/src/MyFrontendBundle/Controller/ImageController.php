@@ -54,16 +54,36 @@ class ImageController extends Controller
 //            $em->flush();
 
 
-
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
+
+
             $i = $image->getFilename();
-                $file = $image;
-                $file->setFilename($i->getClientOriginalName());
-                $file->setMime(finfo_file($finfo, $i));
-                $file->setContents(base64_encode(file_get_contents($i)));
-                $em->persist($file);
-                $em->flush();
-            finfo_close($finfo);
+            if ($finfo == '' or $i == '' ) {
+                return $this->render('image/new.html.twig', array(
+                    'image' => $image,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
+                if (finfo_file($finfo, $i) == 'image/jpeg' or finfo_file($finfo, $i) == 'image/png') {
+                    $file = $image;
+                    $file->setFilename($i->getClientOriginalName());
+                    $file->setMime(finfo_file($finfo, $i));
+                    $file->setContents(base64_encode(file_get_contents($i)));
+
+
+                    $em->persist($file);
+                    $em->flush();
+                    finfo_close($finfo);
+                    return $this->redirectToRoute('image_show', array('id' => $image->getId()));
+
+                } else {
+                    return $this->render('image/new.html.twig', array(
+                        'image' => $image,
+                        'form' => $form->createView(),
+                        'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                    ));
+                }
 
 
 
@@ -77,13 +97,14 @@ class ImageController extends Controller
 //            return $this->render('image/upload.html.twig', array(
 //                'content' => $user
 //            ));
-            return $this->redirectToRoute('image_show', array('id' => $image->getId()));
+//            return $this->redirectToRoute('image_show', array('id' => $image->getId()));
 
         }
 
         return $this->render('image/new.html.twig', array(
             'image' => $image,
             'form' => $form->createView(),
+            'err' => null
         ));
     }
 
@@ -162,8 +183,7 @@ class ImageController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('image_delete', array('id' => $image->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 
     /**
@@ -177,7 +197,7 @@ class ImageController extends Controller
 
 //        $entity =  new Image();
         $entity = $em->getRepository('MyFrontendBundle:Image')
-        ->findOneByFilename($filename);
+            ->findOneByFilename($filename);
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find File entity.');
         }
@@ -193,6 +213,7 @@ class ImageController extends Controller
 //
 //        ));
     }
+
     public function carouselAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -213,5 +234,5 @@ class ImageController extends Controller
 
 
     }
-    
+
 }

@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<!-- Carousel
-================================================== -->
+    <!-- Carousel
+    ================================================== -->
 
 
 
@@ -10,55 +10,75 @@
 
     <div class="row" style="text-align: center">
 
+        <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/tasks">
+            <div class="col-md-3">
+                <div class="post">
 
-        <div class="col-md-3">
-
-            <div class="yt">
-
-                <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/tasks"><i
-                            class="icon-comment-empty"></i></a>
-                {#<div class="info" >#}
+                    <i class="icon-comment-empty"></i>
+                    {#<div class="info" >#}
                     {#<p>Dodawaj lub usuwać newsy.</p>#}
 
 
-                {#</div><!-- /.info -->#}
+                    {#</div><!-- /.info -->#}
+
+                </div>
+            </div>
+        </a>
+
+        <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/squad">
+            <div class="col-md-3">
+                <div class="squad"><i
+                            class="icon-users"></i>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/image">
+            <div class="col-md-3">
+                <div class="images"><i class="icon-camera"></i></div>
 
             </div>
-        </div>
+        </a>
+        {#<a href="">#}
+        {#<figure>#}
+        {#<figcaption class="text-overlay">#}
+        {#<div class="info">#}
+        {#<h4>Programowanie w C++</h4>#}
+        {#<p>Kurs od podstaw, dla każdego, najlepszy na start, na rozpoczęcie nauki kodowania w ogóle. Poznaj składnię języka, rozwiń analityczne myślenie, naucz się programować na konkretnych przykładach.</p>#}
+        {#</div><!-- /.info -->#}
+        {#</figcaption>#}
+        {#<img src="/bundles/mzsite/images/cat/c-plus-plus.png" alt="">#}
+        {#</figure>#}
+        {#</a>#}
 
-        <div class="col-md-3">
-            <div class="fb"><a
-                        href="http://localhost/symfonyCRUDpanel/web/app_dev.php/squad"><i
-                            class="icon-users"></i></a>
+
+        <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/album">
+            <div class="col-md-3">
+                <div class="albums"><i class="icon-th"></i></div>
             </div>
-        </div>
+        </a>
 
+        <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/carousel">
+            <div class="col-md-3">
+                <div class="caro"><i class="icon-mail-alt"></i></div>
+            </div>
+        </a>
 
-        <div class="col-md-3">
-            <div class="tw"><a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/image"><i class="icon-camera"></i></a></div>
+        <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/story">
+            <div class="col-md-3">
+                <div class="story"><i class="icon-mail-alt"></i></div>
+            </div>
+        </a>
 
-        </div>
-
-        <div class="col-md-3">
-            <div class="gplus"><a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/album"><i class="icon-th"></i></a></div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="gplus"><a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/carousel"><i class="icon-mail-alt"></i></a></div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="gplus"><a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/story"><i class="icon-mail-alt"></i></a></div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="gplus"><a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/contact"><i class="icon-mail-alt"></i></a></div>
-        </div>
-
+        <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/contact">
+            <div class="col-md-3">
+                <div class="contact"><i class="icon-mail-alt"></i></div>
+            </div>
+        </a>
         <div style="clear: both"></div>
 
 
     </div>
 
 
-    {% endblock %}
+{% endblock %}
