@@ -6,7 +6,6 @@
 
 
 
-    <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
 
     <div class="row" style="text-align: center">
 
@@ -60,19 +59,26 @@
 
         <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/carousel">
             <div class="col-md-3">
-                <div class="caro"><i class="icon-mail-alt"></i></div>
+                <div class="caro"><i class="icon-docs"></i></div>
             </div>
         </a>
 
         <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/story">
             <div class="col-md-3">
-                <div class="story"><i class="icon-mail-alt"></i></div>
+                <div class="story"><i class="icon-hourglass"></i></div>
             </div>
         </a>
 
         <a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/contact">
             <div class="col-md-3">
                 <div class="contact"><i class="icon-mail-alt"></i></div>
+            </div>
+        </a>
+
+        <a href="{{ path('fos_user_security_logout') }}">
+
+        <div class="col-md-3">
+                <div class="logout"><i class="icon-logout"></i></div>
             </div>
         </a>
         <div style="clear: both"></div>
