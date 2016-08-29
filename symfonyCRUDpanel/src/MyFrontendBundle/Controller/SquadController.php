@@ -54,32 +54,40 @@ class SquadController extends Controller
 
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
             $i = $squad->getFilenameee();
-            $file = $squad;
-            $file->setFilenameee($i->getClientOriginalName());
-            $file->setMimeee(finfo_file($finfo, $i));
-            $file->setContentsss(base64_encode(file_get_contents($i)));
-            $em->persist($file);
-            $em->flush();
-            finfo_close($finfo);
+
+            if ($finfo == '' or $i == '') {
+                return $this->render('squad/new.html.twig', array(
+                    'squad' => $squad,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
+
+            if (finfo_file($finfo, $i) == 'image/jpeg' or finfo_file($finfo, $i) == 'image/png') {
+
+                $file = $squad;
+                $file->setFilenameee($i->getClientOriginalName());
+                $file->setMimeee(finfo_file($finfo, $i));
+                $file->setContentsss(base64_encode(file_get_contents($i)));
+                $em->persist($file);
+                $em->flush();
+                finfo_close($finfo);
 
 
-
-
-
-
-
-
-
-
-
-
-
-            return $this->redirectToRoute('squad_show', array('id' => $squad->getId()));
+                return $this->redirectToRoute('squad_show', array('id' => $squad->getId()));
+            } else {
+                return $this->render('squad/new.html.twig', array(
+                    'squad' => $squad,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
         }
 
         return $this->render('squad/new.html.twig', array(
             'squad' => $squad,
             'form' => $form->createView(),
+            'err' => null
         ));
     }
 

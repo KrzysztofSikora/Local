@@ -18,7 +18,7 @@ class CarouselType extends AbstractType
 //            ->add('cfilename')
 //            ->add('cmime')
 //            ->add('ccontents')
-            ->add('cfilename', 'file', array('data_class' => null))
+            ->add('cfilename', 'file', array('data_class' => null,  'attr' => array('accept' => 'image/jpeg,image/png')))
         ;
     }
     

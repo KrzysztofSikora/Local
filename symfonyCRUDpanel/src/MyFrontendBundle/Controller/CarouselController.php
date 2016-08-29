@@ -54,24 +54,41 @@ class CarouselController extends Controller
 
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
             $i = $carousel->getCfilename();
-            $file = $carousel;
-            $file->setCfilename($i->getClientOriginalName());
-            $file->setCmime(finfo_file($finfo, $i));
-            $file->setCcontents(base64_encode(file_get_contents($i)));
-            $em->persist($file);
-            $em->flush();
-            finfo_close($finfo);
-            
-            
 
-            return $this->redirectToRoute('carousel_show', array('id' => $carousel->getId()));
+            if ($finfo == '' or $i == '') {
+                return $this->render('carousel/new.html.twig', array(
+                    'carousel' => $carousel,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
+
+            if (finfo_file($finfo, $i) == 'image/jpeg' or finfo_file($finfo, $i) == 'image/png') {
+                $file = $carousel;
+                $file->setCfilename($i->getClientOriginalName());
+                $file->setCmime(finfo_file($finfo, $i));
+                $file->setCcontents(base64_encode(file_get_contents($i)));
+                $em->persist($file);
+                $em->flush();
+                finfo_close($finfo);
+
+
+                return $this->redirectToRoute('carousel_show', array('id' => $carousel->getId()));
+            } else {
+
+                return $this->render('carousel/new.html.twig', array(
+                    'carousel' => $carousel,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
         }
-
-        return $this->render('carousel/new.html.twig', array(
-            'carousel' => $carousel,
-            'form' => $form->createView(),
-        ));
-    }
+            return $this->render('carousel/new.html.twig', array(
+                'carousel' => $carousel,
+                'form' => $form->createView(),
+                'err' => null
+            ));
+        }
 
     /**
      * Finds and displays a Carousel entity.

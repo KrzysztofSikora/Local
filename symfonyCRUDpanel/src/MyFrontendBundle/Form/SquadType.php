@@ -15,7 +15,7 @@ class SquadType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('filenameee', 'file', array('data_class' => null))
+            ->add('filenameee', 'file', array('data_class' => null,  'attr' => array('accept' => 'image/jpeg,image/png')))
 //            ->add('mimeee')
 //            ->add('contentsss')
             ->add('descriptionnn')
