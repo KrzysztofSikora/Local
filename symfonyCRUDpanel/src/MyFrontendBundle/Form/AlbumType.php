@@ -18,7 +18,7 @@ class AlbumType extends AbstractType
         
         $builder
 //            ->add('filenamee')
-            ->add('filenamee', 'file', array('data_class' => null))
+            ->add('filenamee', 'file', array('data_class' => null,  'attr' => array('accept' => 'image/jpeg,image/png')))
 //            ->add('mimee')
 //            ->add('contentss')
             ->add('descriptionn')

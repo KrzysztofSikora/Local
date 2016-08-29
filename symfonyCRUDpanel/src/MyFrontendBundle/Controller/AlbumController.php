@@ -53,27 +53,43 @@ class AlbumController extends Controller
 //            $em->flush();
 
 
-
-
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
             $i = $album->getFilenamee();
-            $file = $album;
-            $file->setFilenamee($i->getClientOriginalName());
-            $file->setMimee(finfo_file($finfo, $i));
-            $file->setContentss(base64_encode(file_get_contents($i)));
-            $em->persist($file);
-            $em->flush();
-            finfo_close($finfo);
 
 
+            if ($finfo == '' or $i == '') {
+                return $this->render('album/new.html.twig', array(
+                    'album' => $album,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
+
+            if (finfo_file($finfo, $i) == 'image/jpeg' or finfo_file($finfo, $i) == 'image/png') {
+                $file = $album;
+                $file->setFilenamee($i->getClientOriginalName());
+                $file->setMimee(finfo_file($finfo, $i));
+                $file->setContentss(base64_encode(file_get_contents($i)));
+                $em->persist($file);
+                $em->flush();
+                finfo_close($finfo);
 
 
-            return $this->redirectToRoute('album_show', array('id' => $album->getId()));
+                return $this->redirectToRoute('album_show', array('id' => $album->getId()));
+
+
+            } else {
+                return $this->render('album/new.html.twig', array(
+                    'album' => $album,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
         }
-
         return $this->render('album/new.html.twig', array(
             'album' => $album,
             'form' => $form->createView(),
+            'err' => null,
         ));
     }
 
