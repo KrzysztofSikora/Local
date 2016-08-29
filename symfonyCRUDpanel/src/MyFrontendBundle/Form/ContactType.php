@@ -15,7 +15,7 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('cofilename', 'file', array('data_class' => null))
+            ->add('cofilename', 'file', array('data_class' => null,  'attr' => array('accept' => 'image/jpeg,image/png')))
 //            ->add('conmime')
 //            ->add('cocontents', 'file', array('data_class' => null))
             ->add('condescription')

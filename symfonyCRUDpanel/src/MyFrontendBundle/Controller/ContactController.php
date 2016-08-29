@@ -55,6 +55,16 @@ class ContactController extends Controller
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
             $i = $contact->getCofilename();
 
+            if ($finfo == '' or $i == '') {
+                return $this->render('contact/new.html.twig', array(
+                    'contact' => $contact,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
+
+
+            if (finfo_file($finfo, $i) == 'image/jpeg' or finfo_file($finfo, $i) == 'image/png') {
 
                 $file = $contact;
                 $file->setCofilename($i->getClientOriginalName());
@@ -62,16 +72,26 @@ class ContactController extends Controller
                 $file->setCocontents(base64_encode(file_get_contents($i)));
                 $em->persist($file);
                 $em->flush();
-            finfo_close($finfo);
+                finfo_close($finfo);
 
 
-            return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
+                return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
+            } else {
+
+//
+                return $this->render('contact/new.html.twig', array(
+                    'contact' => $contact,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
         }
+            return $this->render('contact/new.html.twig', array(
+                'contact' => $contact,
+                'form' => $form->createView(),
+                'err' => null,
+            ));
 
-        return $this->render('contact/new.html.twig', array(
-            'contact' => $contact,
-            'form' => $form->createView(),
-        ));
     }
 
     /**
