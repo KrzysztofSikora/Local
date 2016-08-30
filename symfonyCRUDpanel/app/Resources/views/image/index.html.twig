@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Image list</h1>
+    <h1>Lista zdjęć</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Filename</th>
-                <th>Mime</th>
+                <th>Nazwa</th>
+                <th>typ</th>
                 <th>Status</th>
-                <th>Contents</th>
+                <th>Zdjęcie</th>
                 <th>Album</th>
-                <th>Description</th>
-                <th>Actions</th>
+                <th>Opis</th>
+                <th>Opcje</th>
             </tr>
         </thead>
         <tbody>
@@ -34,10 +34,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('image_show', { 'id': image.id }) }}">show</a>
+                            <a href="{{ path('image_show', { 'id': image.id }) }}">Pokaż</a>
                         </li>
                         <li>
-                            <a href="{{ path('image_edit', { 'id': image.id }) }}">edit</a>
+                            <a href="{{ path('image_edit', { 'id': image.id }) }}">Edycja</a>
                         </li>
                     </ul>
                 </td>
@@ -48,7 +48,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('image_new') }}">Create a new entry</a>
+            <a href="{{ path('image_new') }}">Dodaj nowe zdjęcie</a>
         </li>
     </ul>
 {% endblock %}

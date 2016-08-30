@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Carousel list</h1>
+    <h1>Lista zdjęć karuzeli</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Cfilename</th>
-                <th>Cmime</th>
-                <th>Ccontents</th>
-                <th>Actions</th>
+                <th>Nazwa zdjęcia</th>
+                <th>Typ zdjecia</th>
+                <th>Obrazek</th>
+                <th>Opcje</th>
             </tr>
         </thead>
         <tbody>
@@ -25,10 +25,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('carousel_show', { 'id': carousel.id }) }}">show</a>
+                            <a href="{{ path('carousel_show', { 'id': carousel.id }) }}">Pokaż</a>
                         </li>
                         <li>
-                            <a href="{{ path('carousel_edit', { 'id': carousel.id }) }}">edit</a>
+                            <a href="{{ path('carousel_edit', { 'id': carousel.id }) }}">Edycja</a>
                         </li>
                     </ul>
                 </td>
@@ -39,7 +39,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('carousel_new') }}">Create a new entry</a>
+            <a href="{{ path('carousel_new') }}">Dodaj zdjęcie</a>
         </li>
     </ul>
 {% endblock %}

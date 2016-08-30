@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Tasks list</h1>
+    <h1>Lista postów</h1>
     <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Description</th>
+                <th>Tytuł</th>
+                <th>Opis</th>
                 <th>Status</th>
-                <th>Posted</th>
-                <th>Actions</th>
+                <th>Data dodania</th>
+                <th>Opcje</th>
             </tr>
         </thead>
         <tbody>
@@ -26,10 +26,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('tasks_show', { 'id': task.id }) }}">show</a>
+                            <a href="{{ path('tasks_show', { 'id': task.id }) }}">Pokaż</a>
                         </li>
                         <li>
-                            <a href="{{ path('tasks_edit', { 'id': task.id }) }}">edit</a>
+                            <a href="{{ path('tasks_edit', { 'id': task.id }) }}">Edytuj</a>
                         </li>
                     </ul>
                 </td>
@@ -40,7 +40,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('tasks_new') }}">Create a new entry</a>
+            <a href="{{ path('tasks_new') }}">Dodaj nowy post</a>
         </li>
     </ul>
 {% endblock %}

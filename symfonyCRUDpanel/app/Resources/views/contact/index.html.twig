@@ -1,20 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Contact list</h1>
+    <h1>Lista kontaktów</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Cofilename</th>
-                <th>Conmime</th>
-                <th>Cocontents</th>
-                <th>Condescription</th>
-                <th>Conname</th>
-                <th>Tel</th>
-                <th>Meil</th>
-                <th>Actions</th>
+                <th>Nazwa obrazka</th>
+                <th>Typ obrazka</th>
+                <th>Obrazek</th>
+                <th>Opis</th>
+                <th>Imię i Nazwisko</th>
+                <th>Telefon</th>
+                <th>Email</th>
+                <th>Opcje</th>
             </tr>
         </thead>
         <tbody>
@@ -33,10 +33,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">show</a>
+                            <a href="{{ path('contact_show', { 'id': contact.id }) }}">Pokaż</a>
                         </li>
                         <li>
-                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">edit</a>
+                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">Edytuj</a>
                         </li>
                     </ul>
                 </td>
@@ -47,7 +47,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('contact_new') }}">Create a new entry</a>
+            <a href="{{ path('contact_new') }}">Dodaj nowy kontakt</a>
         </li>
     </ul>
 {% endblock %}
