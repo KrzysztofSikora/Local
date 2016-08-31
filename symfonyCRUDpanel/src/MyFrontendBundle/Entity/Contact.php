@@ -70,7 +70,12 @@ class Contact
      */
     private $meil;
 
-
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
     /**
      * Get id
      *
@@ -240,5 +245,37 @@ class Contact
     public function getMeil()
     {
         return $this->meil;
+    }
+
+
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Contact
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    public function __toString()
+    {
+        $pp = $this->getPosition();
+
+        return "$pp";
     }
 }

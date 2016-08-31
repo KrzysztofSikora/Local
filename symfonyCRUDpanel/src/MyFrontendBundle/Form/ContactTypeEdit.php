@@ -22,6 +22,7 @@ class ContactTypeEdit extends AbstractType
             ->add('conname')
             ->add('tel')
             ->add('meil')
+            ->add('position')
         ;
     }
     

@@ -18,7 +18,7 @@
     {#</div>#}
 
 
-    {% for contact in contacts %}
+    {% for contact in pagination %}
         {#<tr>#}
             {#<td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>#}
             {#<td>{{ contact.cofilename }}</td>#}
@@ -56,7 +56,9 @@
         </div>
     {% endfor %}
 
-
+    <div class="navigation" style="text-align: center;bottom:0;">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 
 
 

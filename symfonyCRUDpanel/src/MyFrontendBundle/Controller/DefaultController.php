@@ -68,16 +68,38 @@ class DefaultController extends Controller
     /**
      * @Route("/con")
      */
-    public function contactAction()
+    public function contactAction(Request $request)
     {
 
-        $em = $this->getDoctrine()->getManager();
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $contacts = $em->getRepository('MyFrontendBundle:Contact')->findAll();
+//
+//        return $this->render('MyFrontendBundle:Default:contact.html.twig', array(
+//            'contacts' => $contacts,
+//        ));
 
-        $contacts = $em->getRepository('MyFrontendBundle:Contact')->findAll();
 
-        return $this->render('MyFrontendBundle:Default:contact.html.twig', array(
-            'contacts' => $contacts,
-        ));
+        $em    = $this->get('doctrine.orm.entity_manager');
+        $dql   = "SELECT a FROM MyFrontendBundle:Contact a ORDER By a.position ASC";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            4/*limit per page*/
+        );
+
+        // parameters to template
+//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
+        return $this->render('MyFrontendBundle:Default:contact.html.twig', array('pagination' => $pagination));
+
+
+
+
+
 
 
     }
