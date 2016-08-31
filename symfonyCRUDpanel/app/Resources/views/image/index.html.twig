@@ -1,50 +1,106 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Lista zdjęć</h1>
+    {#<h1>Lista zdjęć</h1>#}
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nazwa</th>
-                <th>typ</th>
-                <th>Status</th>
-                <th>Zdjęcie</th>
-                <th>Album</th>
-                <th>Opis</th>
-                <th>Opcje</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for image in images %}
-            <tr>
-                <td><a href="{{ path('image_show', { 'id': image.id }) }}">{{ image.id }}</a></td>
-                <td>{{ image.filename }}</td>
-                <td>{{ image.mime }}</td>
-                <td>{{ image.status }}</td>
+    {#<table>#}
+        {#<thead>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<th>Nazwa</th>#}
+                {#<th>typ</th>#}
+                {#<th>Status</th>#}
+                {#<th>Zdjęcie</th>#}
+                {#<th>Album</th>#}
+                {#<th>Opis</th>#}
+                {#<th>Opcje</th>#}
+            {#</tr>#}
+        {#</thead>#}
+        {#<tbody>#}
+        {#{% for image in images %}#}
+            {#<tr>#}
+                {#<td><a href="{{ path('image_show', { 'id': image.id }) }}">{{ image.id }}</a></td>#}
+                {#<td>{{ image.filename }}</td>#}
+                {#<td>{{ image.mime }}</td>#}
+                {#<td>{{ image.status }}</td>#}
                 {#<td>{{ image.contents }}</td>#}
-                <td><a href="{{ path('file_show', { 'filename': image.filename }) }}"><img
-                            src="{{ path('file_show', { 'filename': image.filename }) }}  " style="height: 250px"></a>
-                </td>
+                {#<td><a href="{{ path('file_show', { 'filename': image.filename }) }}"><img#}
+                            {#src="{{ path('file_show', { 'filename': image.filename }) }}  " style="height: 250px"></a>#}
+                {#</td>#}
                 {#<a href="{{ path('file_show', { 'filename': image.filename }) }}">sss#}
                     {#<img src="{{ path('file_show', { 'filename': image.filename }) }}  " style="height: 250px"></a>#}
-                <td>{{ image.album }}</td>
-                <td>{{ image.description }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('image_show', { 'id': image.id }) }}">Pokaż</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('image_edit', { 'id': image.id }) }}">Edycja</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+                {#<td>{{ image.album }}</td>#}
+                {#<td>{{ image.description }}</td>#}
+                {#<td>#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('image_show', { 'id': image.id }) }}">Pokaż</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('image_edit', { 'id': image.id }) }}">Edycja</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+        {#{% endfor %}#}
+        {#</tbody>#}
+    {#</table>#}
+
+    {#<ul>#}
+        {#<li>#}
+            {#<a href="{{ path('image_new') }}">Dodaj nowe zdjęcie</a>#}
+        {#</li>#}
+    {#</ul>#}
+    <h1>Lista zdjęć</h1>
+
+
+        {% for image in images %}
+
+            <div class="media">
+                <a class="pull-left">
+                    <img class="media-object" src="{{ path('file_show', { 'filename': image.filename }) }}" width="128px">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Opis: {{ image.description }}
+
+                        <small style="float: right">
+                            <ul style="float: right; display: inline">
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('image_show', { 'id': image.id }) }}">Pokaż</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('image_edit', { 'id': image.id }) }}">Edycja</a>
+                                    </li>
+                                </ul>
+                            </ul></small>
+
+                        <small style="float: right">
+                        <ul>
+                            <ul>
+                                <li>
+                                    Album: {{ image.album }}
+                                </li>
+                                <li>
+                                    Typ obrazka: {{ image.mime }}
+                                </li>
+                            </ul>
+                        </ul></small>
+
+
+
+                    </h4><small style="float: left">Nazwa obrazka: {{ image.filename }}</small>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
         {% endfor %}
-        </tbody>
-    </table>
 
     <ul>
         <li>
