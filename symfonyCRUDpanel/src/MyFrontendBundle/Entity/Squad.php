@@ -65,6 +65,13 @@ class Squad
      */
     private $info;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+
 
     /**
      * Get id
@@ -212,5 +219,35 @@ class Squad
     public function getInfo()
     {
         return $this->info;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Squad
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    public function __toString()
+    {
+        $p = $this->getPosition();
+
+        return "$p";
     }
 }

@@ -21,6 +21,7 @@ class SquadTypeEdit extends AbstractType
             ->add('descriptionnn')
             ->add('name')
             ->add('info')
+            ->add('position')
         ;
     }
     

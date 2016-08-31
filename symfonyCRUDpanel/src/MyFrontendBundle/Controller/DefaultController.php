@@ -133,7 +133,7 @@ class DefaultController extends Controller
     public function membersAction(Request $request)
     {
         $em    = $this->get('doctrine.orm.entity_manager');
-        $dql   = "SELECT a FROM MyFrontendBundle:Squad a";
+        $dql   = "SELECT a FROM MyFrontendBundle:Squad a ORDER By a.position ASC";
         $query = $em->createQuery($dql);
 
         $paginator  = $this->get('knp_paginator');
