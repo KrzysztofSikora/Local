@@ -33,8 +33,8 @@
         body {
             font-family: 'Lato', sans-serif;
             font-size: 150%;
-            /*background-color: #222930;*/
-            background-color: #f1f1f1;
+            background-color: #222930;
+            /*background-color: #f1f1f1;*/
         }
 
         /*kolor a w task index*/
@@ -53,15 +53,28 @@
             border: solid 1px;
         }
         .breadcrumb {
-            background-color: #161b20;
-            /*background: rgba(241,231,103,1);*/
-            /*background: -moz-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);*/
-            /*background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(34,41,48,1)));*/
-            /*background: -webkit-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);*/
-            /*background: -o-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);*/
-            /*background: -ms-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);*/
-            /*background: radial-gradient(ellipse at center, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);*/
-            /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#222930', GradientType=1 );*/
+            /*background-color: #161b20;*/
+            /*background: rgba(255,255,255,1);*/
+            /*background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(218,37,29,1) 46%, rgba(218,37,29,1) 47%, rgba(0,146,63,1) 82%, rgba(0,146,63,1) 100%);*/
+            /*background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(25%, rgba(255,255,255,1)), color-stop(46%, rgba(218,37,29,1)), color-stop(47%, rgba(218,37,29,1)), color-stop(82%, rgba(0,146,63,1)), color-stop(100%, rgba(0,146,63,1)));*/
+            /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(218,37,29,1) 46%, rgba(218,37,29,1) 47%, rgba(0,146,63,1) 82%, rgba(0,146,63,1) 100%);*/
+            /*background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(218,37,29,1) 46%, rgba(218,37,29,1) 47%, rgba(0,146,63,1) 82%, rgba(0,146,63,1) 100%);*/
+            /*background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(218,37,29,1) 46%, rgba(218,37,29,1) 47%, rgba(0,146,63,1) 82%, rgba(0,146,63,1) 100%);*/
+            /*background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(218,37,29,1) 46%, rgba(218,37,29,1) 47%, rgba(0,146,63,1) 82%, rgba(0,146,63,1) 100%);*/
+            /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00923f', GradientType=0 );*/
+
+
+
+
+
+            background: rgba(241,231,103,1);
+            background: -moz-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(34,41,48,1)));
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);
+            background: -o-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);
+            background: -ms-radial-gradient(center, ellipse cover, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);
+            background: radial-gradient(ellipse at center, rgba(241,231,103,1) 0%, rgba(34,41,48,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#222930', GradientType=1 );
         }
 
         body > div.container > div:nth-child(5) > div:nth-child(1) {
@@ -124,6 +137,7 @@
 
         body > div > nav > div {
             background-color: #c34f4f;
+            /*background-color: #ec2a32;*/
             width: 100%;
             -webkit-transition: all 800ms ease-out;
             -moz-transition: all 800ms ease-out;
@@ -528,7 +542,11 @@
 
     <div class="breadcrumb">
 
-        <h1 style="color: #c34f4f;text-align: center">orkiestra.com</h1>
+
+
+        <h3 style="color: #c34f4f;text-align: center"> Miejska Orkiestra Dęta w</h3>
+        <h3 style="color: #c34f4f;text-align: center"> <img src="{{ asset('images/godło1.png') }}" width="40px"> Suchej Beskidzkiej
+        </h3>
 
 
     </div>
