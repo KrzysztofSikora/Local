@@ -18,10 +18,10 @@ class AlbumType extends AbstractType
         
         $builder
 //            ->add('filenamee')
-            ->add('filenamee', 'file', array('data_class' => null,  'attr' => array('accept' => 'image/jpeg,image/png')))
+            ->add('filenamee', 'file', array('data_class' => null,'label' => 'Obraz',  'attr' => array('accept' => 'image/jpeg,image/png' )))
 //            ->add('mimee')
 //            ->add('contentss')
-            ->add('descriptionn')
+            ->add('descriptionn', null, array('label' => 'Opis'))
         ;
     }
     
