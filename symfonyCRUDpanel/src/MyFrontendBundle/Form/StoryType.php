@@ -16,8 +16,8 @@ class StoryType extends AbstractType
     {
         $builder->getData();
         $builder
-            ->add('paragraph')
-          
+            ->add('paragraph', null, array('label' => 'Akapit'))
+     
             
         ;
     }
