@@ -25,8 +25,8 @@ class ImageTypeEdit extends AbstractType
 //            ->add('filename', 'file', array('data_class' => null))
             ->add('filename', 'hidden', array('data_class' => null))
 //            ->add('album')
-            ->add('description')
-            ->add('status', null, array('label' => 'Karuzela'))
+            ->add('description', null, array('label' => 'Opis'))
+            ->add('status', 'hidden', array('label' => 'Karuzela','data' => 0))
             ->add('album')
         ;
     }

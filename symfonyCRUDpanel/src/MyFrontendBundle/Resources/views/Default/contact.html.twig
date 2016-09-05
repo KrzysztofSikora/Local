@@ -47,11 +47,11 @@
                 <img class="media-object" src="{{ path('confile_show', { 'filename': contact.cofilename }) }}" width="128px">
             </a>
             <div class="media-body">
-                <h4 class="media-heading">{{ contact.conname }}
-                    <small>{{ contact.condescription }}</small>
+                <h4 class="media-heading" style="padding-left: 10px;padding-top:10px;text-align: justify">{{ contact.conname }}
+                    <small style="padding: 10px;text-align: justify">{{ contact.condescription }}</small>
                 </h4>
-                tel : {{ contact.tel }}
-                e-mail: {{ contact.meil }}
+                <p style="padding-left: 10px;padding-top:10px;text-align: justify">tel : {{ contact.tel }}</p>
+                <p style="padding-left: 10px;text-align: justify">e-mail: {{ contact.meil }}</p>
             </div>
         </div>
     {% endfor %}

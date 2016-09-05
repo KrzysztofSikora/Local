@@ -21,7 +21,7 @@ class AlbumTypeEdit extends AbstractType
             ->add('filenamee', 'hidden', array('data_class' => null))
 //            ->add('mimee')
 //            ->add('contentss')
-            ->add('descriptionn')
+            ->add('descriptionn', null, array('label' => 'Opis'))
         ;
     }
     

@@ -9,10 +9,10 @@
             <img class="media-object" src="{{ path('fileee_show', { 'filename': squad.filenameee }) }}" width="128px">
         </a>
         <div class="media-body">
-            <h4 class="media-heading">{{ squad.name }}
-                <small>{{ squad.descriptionnn }}</small>
+            <h4 class="media-heading" style="padding-left: 10px;padding-top:10px;text-align: justify">{{ squad.name }}
+                <small style="padding: 10px;text-align: justify">{{ squad.descriptionnn }}</small>
             </h4>
-            {{ squad.info }}
+            <p style="padding-left: 10px;padding-top:10px;text-align: justify">{{ squad.info }}</p>
         </div>
     </div>
 {% endfor %}

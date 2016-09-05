@@ -22,11 +22,11 @@ class ImageType extends AbstractType
 //            ->add('filename')
 //            ->add('mime')
 //            ->add('contents')
-            ->add('filename', 'file', array('data_class' => null,  'attr' => array('accept' => 'image/jpeg,image/png')))
+            ->add('filename', 'file', array('data_class' => null,'label' => 'Obraz',  'attr' => array('accept' => 'image/jpeg,image/png')))
 //            ->add('filename', 'hidden', array('data_class' => null))
 //            ->add('album')
-            ->add('description')
-            ->add('status', null, array('label' => 'Karuzela'))
+            ->add('description', null, array('label' => 'Opis'))
+            ->add('status', 'hidden', array('label' => 'Karuzela','data' => 0))
             ->add('album', null, array('required' => true))
         ;
     }

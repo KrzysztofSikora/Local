@@ -11,12 +11,12 @@
             <!-- Comment -->
             <div class="media">
                 <div class="media-body">
-                    <h4 class="media-heading">{{ article.title }}
-                        <small style="float: right">{{ article.posted|date('Y-m-d H:i:s') }}</small>
-                    </h4>
+                    <h3 class="media-heading"><span style="padding: 10px">{{ article.title }}</span>
+                        <small style="float: right;padding: 10px">{{ article.posted|date('Y-m-d H:i:s') }}</small>
+                    </h3>
                     <br/>
                     <br/>
-                    {{ article.description }}
+                    <p style="padding: 10px;text-align: justify">{{ article.description }}</p>
                 </div>
             </div>
 
