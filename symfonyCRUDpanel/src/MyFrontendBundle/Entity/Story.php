@@ -27,7 +27,12 @@ class Story
      * @ORM\Column(name="paragraph", type="text")
      */
     private $paragraph;
-
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
 
     /**
      * Get id
@@ -61,5 +66,28 @@ class Story
     public function getParagraph()
     {
         return $this->paragraph;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Story
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 }

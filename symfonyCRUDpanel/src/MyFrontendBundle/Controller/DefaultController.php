@@ -43,16 +43,35 @@ class DefaultController extends Controller
     /**
      * @Route("/history")
      */
-    public function historyAction()
+    public function historyAction(Request $request)
     {
 
-        $em = $this->getDoctrine()->getManager();
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $stories = $em->getRepository('MyFrontendBundle:Story')->findAll();
+//
+//        return $this->render('MyFrontendBundle:Default:history.html.twig', array(
+//            'stories' => $stories,
+//        ));
 
-        $stories = $em->getRepository('MyFrontendBundle:Story')->findAll();
 
-        return $this->render('MyFrontendBundle:Default:history.html.twig', array(
-            'stories' => $stories,
-        ));
+        $em    = $this->get('doctrine.orm.entity_manager');
+        $dql   = "SELECT a FROM MyFrontendBundle:Story a ORDER By a.position ASC";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+        // parameters to template
+//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
+        return $this->render('MyFrontendBundle:Default:history.html.twig', array('pagination' => $pagination));
+
+
 
 
     }
