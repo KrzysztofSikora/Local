@@ -15,13 +15,13 @@ class SquadType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('filenameee', 'file', array('data_class' => null,  'attr' => array('accept' => 'image/jpeg,image/png')))
+            ->add('filenameee', 'file', array('data_class' => null,'label' => 'Obraz',  'attr' => array('accept' => 'image/jpeg,image/png')))
 //            ->add('mimeee')
 //            ->add('contentsss')
-            ->add('descriptionnn')
-            ->add('name')
-            ->add('info')
-            ->add('position')
+            ->add('descriptionnn', null, array('label' => 'Opis'))
+            ->add('name', null, array('label' => 'Imie i nazwisko'))
+            ->add('info', null, array('label' => 'Info'))
+            ->add('position', null, array('label' => 'Pozycja'))
         ;
     }
     

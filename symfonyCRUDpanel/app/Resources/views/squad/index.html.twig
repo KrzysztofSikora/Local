@@ -72,11 +72,26 @@
                                 </li>
                             </ul>
                         </ul></small>
-                    <small>{{ squad.descriptionnn }}</small>
-                    <small>{{ squad.position }}</small>
+                    <small style="float: right">
+                        <ul>
+                            <ul>
+                                {#<li>#}
+                                    {#Nazwa obrazka: {{ squad.filenameee }}#}
+                                {#</li>#}
+                                <li>
+                                    Typ obrazka: {{ squad.mimeee }}
+                                </li>
+                                <li>
+                                    Pozycja: {{ squad.position }}
+                                </li>
+                            </ul>
+                        </ul></small>
+
+                    <small>{{ squad.descriptionnn }} </small>
+
                 </h4>
 
-               Pozycja {{ squad.info }}
+                {{ squad.info }}
             </div>
             </div>
 

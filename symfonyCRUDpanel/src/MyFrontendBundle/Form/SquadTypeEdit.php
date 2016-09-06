@@ -18,10 +18,10 @@ class SquadTypeEdit extends AbstractType
             ->add('filenameee', 'hidden', array('data_class' => null))
 //            ->add('mimeee')
 //            ->add('contentsss')
-            ->add('descriptionnn')
-            ->add('name')
-            ->add('info')
-            ->add('position')
+            ->add('descriptionnn', null, array('label' => 'Opis'))
+            ->add('name', null, array('label' => 'Imię i nazwisko'))
+            ->add('info', null, array('label' => 'Info'))
+            ->add('position', null, array('label' => 'Pozycja'))
         ;
     }
     
