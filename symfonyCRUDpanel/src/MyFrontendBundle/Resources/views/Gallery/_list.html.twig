@@ -1,20 +1,21 @@
-<ul>
+{#<ul>#}
     {% for film in dane %}
 
-
-                {#{{ film }}#}
-                {#{{ film.id }}#}
-                {#{{ film.filenamee }}#}
-                {#{{ film.mimee }}#}
-                {#{{ film.contentss }}#}
-                {#{{ film.descriptionn }}#}
-            <div class="col-md-3">
-                <a href="{{ path('film_show', { 'id': film.id }) }}" class="thumbnail" >
+<style>
+    .icon-camera:before {
+        font-size: 20px;
+        margin:10px;
+    }
+</style>
+        <div class="col-md-3" >
+            <a href="{{ path('film_show', { 'id': film.id }) }}" class="thumbnail" style="background-color: #2f4052">
                 <img class= "img-responsive" src="{{ path('filee_show', { 'filename': film.filenamee }) }}" alt="..." style="height: 180px">
-                </a>
-                {{ film.descriptionn }}
-                </div>
+                <i style="font-size: 20px" class="icon-camera" >{{ film.descriptionn }}</i>
+            </a>
+            {#<p style="text-align: center">{{ film.descriptionn }}</p>#}
+            <br/>
+        </div>
 
 
     {% endfor %}
-</ul>
+{#</ul>#}
