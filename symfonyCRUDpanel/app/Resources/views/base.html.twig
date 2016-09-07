@@ -360,6 +360,7 @@
             /*opacity: 0.2;*/
         }
 
+
         #footbar > div:nth-child(1) > div.col-md-8 > div:nth-child(3) > div > a:hover {
             color: white;
             text-decoration: underline;
@@ -376,6 +377,11 @@
         #footbar > div:nth-child(1) > div.col-md-8 > div:nth-child(1) > div > a:hover {
             color: white;
             text-decoration: underline;
+        }
+
+        #footbar > div:nth-child(2) > div > p > a:hover {
+            color: #3BA66E;
+            text-decoration: none;
         }
         .gplus:hover {
             /*background-color: #d95333;*/
@@ -572,7 +578,6 @@
         <h2 style="color: #c34f4f;text-align: center"><img src="{{ asset('images/godło1.png') }}" style="margin-right: 20px" width="40px">Miejska Orkiestra Dęta w Suchej Beskidzkiej
         </h2>
 
-
     </div>
     {#<div class="logo">#}
     {#<h1 style="color: #c34f4f;text-align: center">orkiestra.com</h1>#}
@@ -691,6 +696,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
+
             </div>
             <div id="content" class="col-md-8" style="min-height: 600px; margin-top: 25px;margin-bottom:25px">
 
@@ -700,6 +706,15 @@
 
             </div>
             <div class="col-md-2">
+                <div>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <p>   Jesteś zalogowany</p> <p>jako administrator.</p>
+                        <p><a href="{{ path('fos_user_security_logout') }}">Wyloguj</a></p>
+                    {% elseif is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+                    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+
+                    {% endif %}</div>
             </div>
         </div>
     </div>
@@ -741,7 +756,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p style="padding: 20px;">orkietstra.com &copy; 2016 Developed<a href="http://krzysztofsikora24.pl">
-                        Krzysztof Sikora </a><a href="http://localhost/symfonyCRUDpanel/web/app_dev.php/panel">Panel</a>
+                        Krzysztof Sikora </a><a href="{{ path('panel_index') }}">Panel</a>
                 </p>
 
             </div>

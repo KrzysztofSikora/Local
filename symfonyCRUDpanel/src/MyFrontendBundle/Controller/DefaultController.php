@@ -156,7 +156,7 @@ class DefaultController extends Controller
 //    }
 
     /**
-     * @Route("/panel")
+     * @Route("/panel", name="panel_index")
      */
     public function panelAction()
     {

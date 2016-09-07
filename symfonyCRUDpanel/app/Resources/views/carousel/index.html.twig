@@ -43,7 +43,9 @@
     {#</li>#}
     {#</ul>#}
     <h1>Lista zdjęć karuzeli</h1>
-
+    <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a><br/>
+    <a href="{{ path('panel_index') }}">Panel</a>
+    <br/> <br/>
 
     {% for carousel in carousels %}
 
