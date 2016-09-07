@@ -18,7 +18,7 @@ class DefaultController extends Controller
 //}
     {
     /**
-     * @Route("/")
+     * @Route("/", name="main_index")
      */
     public function indexAction(Request $request)
     {
@@ -41,7 +41,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/history")
+     * @Route("/history", name="history_index")
      */
     public function historyAction(Request $request)
     {
@@ -85,7 +85,7 @@ class DefaultController extends Controller
 //    }
 
     /**
-     * @Route("/con")
+     * @Route("/con", name="con_index")
      */
     public function contactAction(Request $request)
     {
@@ -169,7 +169,7 @@ class DefaultController extends Controller
     
     
     /**
-     * @Route("/members")
+     * @Route("/members",name="members_index")
      */
     public function membersAction(Request $request)
     {
