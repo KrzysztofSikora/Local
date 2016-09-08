@@ -40,6 +40,9 @@
             color: black;
         }
 
+        #footer {
+            text-align: center;background-color: #161b20
+        }
 
         /*kolor a w task index*/
        ul > li > a {
@@ -117,6 +120,8 @@
 
         .navbar {
             border: 0;
+            margin-bottom: 0;
+
         }
 
         #bs-example-navbar-collapse-1 > ol > ul > li {
@@ -360,7 +365,9 @@
             /*opacity: 0.2;*/
         }
 
-
+    #footbar {
+        text-align: center;
+    }
         #footbar > div:nth-child(1) > div.col-md-8 > div:nth-child(3) > div > a:hover {
             color: white;
             text-decoration: underline;
@@ -415,12 +422,16 @@
         }
 
         #myCarousel > div > div > img {
-            max-height: 300px !important;
+            /*max-height: 300px !important;*/
+            height: 300px !important;
 
         }
 
         #content {
-        {#background: url({{ asset('images/godło1.png') }});#}{#background-repeat: no-repeat;#}{#background-attachment: fixed;#}{#background-position: center center;#}{#background-size: 30%;#}
+            min-height: 600px;
+            margin-top: 25px;
+            margin-bottom:25px;
+            text-align: left;
         }
 
         .breadcrumb {
@@ -726,23 +737,23 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <div class="col-md-3">
+                <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="fb"><a
                                 href="https://www.facebook.com/krzysztofsikora24pl-1541480686181605"><i
                                     class="icon-facebook"></i></a>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="yt"><a href="https://www.youtube.com"><i class="icon-youtube-squared"></i></a></div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="tw"><a href="https://www.instagram.com"><i class="icon-instagram"></i></a></div>
 
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="gplus"><a href="https://www.plus.google.com"><i class="icon-snapchat-square"></i></a></div>
                 </div>
 
@@ -753,7 +764,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row" id="footer">
             <div class="col-md-12">
                 <p style="padding: 20px;">orkietstra.com &copy; 2016 Developed<a href="http://krzysztofsikora24.pl">
                         Krzysztof Sikora </a><a href="{{ path('panel_index') }}">Panel</a>
@@ -765,30 +776,58 @@
 
     </div>
     <script src="{{ asset('js/jquery-3.1.0.min.js') }}"></script>
+    {#<script>#}
+
+        {#$(document).ready(function () {#}
+            {#var NavY = $('.navbar').offset().top;#}
+
+            {#var stickyNav = function () {#}
+                {#var ScrollY = $(window).scrollTop();#}
+
+                {#if (ScrollY > NavY) {#}
+                    {#$('.navbar').addClass('sticky');#}
+                {#} else {#}
+                    {#$('.navbar').removeClass('sticky');#}
+                {#}#}
+            {#};#}
+
+            {#stickyNav();#}
+
+            {#$(window).scroll(function () {#}
+                {#stickyNav();#}
+            {#});#}
+        {#});#}
+
+    {#</script>#}
     <script>
+        // Create a clone of the menu, right next to original.
+        $('.navbar').addClass('original').clone().insertAfter('.navbar').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-        $(document).ready(function () {
-            var NavY = $('.navbar').offset().top;
+        scrollIntervalID = setInterval(stickIt, 10);
 
-            var stickyNav = function () {
-                var ScrollY = $(window).scrollTop();
 
-                if (ScrollY > NavY) {
-                    $('.navbar').addClass('sticky');
-                } else {
-                    $('.navbar').removeClass('sticky');
-                }
-            };
+        function stickIt() {
 
-            stickyNav();
+            var orgElementPos = $('.original').offset();
+            orgElementTop = orgElementPos.top;
 
-            $(window).scroll(function () {
-                stickyNav();
-            });
-        });
+            if ($(window).scrollTop() >= (orgElementTop)) {
+                // scrolled past the original position; now only show the cloned, sticky element.
 
+                // Cloned element should always have same left position and width as original element.
+                orgElement = $('.original');
+                coordsOrgElement = orgElement.offset();
+                leftOrgElement = coordsOrgElement.left;
+                widthOrgElement = orgElement.css('width');
+                $('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();
+                $('.original').css('visibility','hidden');
+            } else {
+                // not scrolled past the menu; only show the original menu.
+                $('.cloned').hide();
+                $('.original').css('visibility','visible');
+            }
+        }
     </script>
-
     <script src="{{ asset("/js/picturefill.min.js") }}"></script>
     {#<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>#}
     <script src="{{ asset("/js/lightgallery.js") }}"></script>
