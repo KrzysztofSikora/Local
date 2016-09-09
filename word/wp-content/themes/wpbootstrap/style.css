@@ -1,0 +1,44 @@
+/*
+Theme Name: WP Style Krzysztof Sikora
+Description: Motyw do wordpress w oparciu o Bootstrap.
+Author: Krzysztof Sikora Full Stack Web Developer
+Author URI: http://krzysztofsikora24.pl
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+
+@import url('bootstrap/css/bootstrap.css');
+@import url('bootstrap/css/bootstrap-responsive.css');
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+body {
+    background-color: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+
+#content {
+    background-color: #ffffff;
+}
+
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus,
+.navbar-inverse .nav .current_page_item a,
+.navbar-inverse .nav .current_page_item a:hover,
+.navbar-inverse .nav .current_page_item a:focus,
+.navbar-inverse .nav .current_page_parent a,
+.navbar-inverse .nav .current_page_parent a:hover,
+.navbar-inverse .nav .current_page_parent a:focus {
+
+background-color: red;
+}
