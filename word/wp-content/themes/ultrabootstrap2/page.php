@@ -14,7 +14,7 @@ get_header(); ?>
 <div class="spacer">
 <div class="container">
 	<div class="row">
-		<div  class="col-sm-12">
+		<div  class="col-sm-9">
 <section class="page-section">
 			<div class="detail-content">
 	            <?php while ( have_posts() ) : the_post(); ?>
