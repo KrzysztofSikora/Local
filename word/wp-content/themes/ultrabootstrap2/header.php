@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	
 	<?php wp_head(); ?>
 </head>
 
@@ -33,7 +34,7 @@
 		</div>
 		<?php echo do_shortcode("[R-slider id='1']"); ?>
 <section class="logo-menu">
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar">
 		<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 				    <div class="navbar-header">
@@ -47,8 +48,9 @@
 				      		
 				      			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php if ( has_custom_logo()): the_custom_logo(); else: ?>
 				      			<h1 class="site-title" style="color:<?php echo "#". $header_text_color;?>"><?php echo bloginfo( 'name' ); ?></h1>
-				      			<h2 class="site-description" style="color:<?php echo "#". $header_text_color;?>"><?php bloginfo('description'); ?></h2><?php endif; ?></a>                     
-      						
+				      			<h2 class="site-description" style="color:<?php echo "#". $header_text_color;?>"><?php bloginfo('description'); ?></h2>
+									<?php endif; ?></a>
+
       					</div>
 				    </div>
 
@@ -70,7 +72,7 @@
 								</div>
 							</ul>
 						</form>
-  							
+
 						<?php
 				            wp_nav_menu( array(
 				                'menu'              => 'primary',

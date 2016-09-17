@@ -21,7 +21,7 @@
 
         <?php the_excerpt('ultrabootstrap_excerpt_length');?>
         
-        <a href="<?php the_permalink(); ?>" rel="bookmark" title="" class="readmore">Read More </a>
+        <a href="<?php the_permalink(); ?>" rel="bookmark" title="" class="readmore">Czytaj wiecej </a>
 
     </div>
 </div>

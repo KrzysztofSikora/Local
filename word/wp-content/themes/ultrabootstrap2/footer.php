@@ -61,8 +61,8 @@
 					</div>
 				<?php }?> 
 				
-			    <div class="pull-right">
-			        <a href="http://wordpress.org">Proudly powered by Wordpress</a> | Theme Ultrabootstrap by <a href="http://phantomthemes.com">Phantom Themes</a>
+			    <div class="pull-center">
+					orkietstra.com © 2016 <a href="http://wordpress.org">Wordpress  </a>Developed<a href="http://krzysztofsikora24.pl"> Krzysztof Sikora</a>
 			      </div>
 			    </div>
 

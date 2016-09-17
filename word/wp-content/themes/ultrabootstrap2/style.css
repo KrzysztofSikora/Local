@@ -1,3 +1,8 @@
+/*p {*/
+	/*margin-bottom: 1.5em;*/
+/*}*/
+
+
 /*
 Theme Name: ultrabootstrap eskperymentalne theme
 
@@ -819,7 +824,7 @@ a.readmore{font-size: 0.8em;text-transform: uppercase;letter-spacing: 3px;}
 .logged-in header .navbar-default{top: 32px;}
 
 
-/*header*/
+header
 header .logo-tag{margin:5px 0;}
 header .logo-tag h1{margin:6px 0;font-size: 1.5em;}
 header .logo-tag h1 a:hover{text-decoration: none;}
@@ -829,7 +834,7 @@ header .navbar-form {margin-top: 0;margin-bottom: 0;}
 header .navbar-form .main-search{position: relative;}
 header .navbar-form .main-search .btn .fa{font-size: 1.5em;}
 header .navbar-form .btn{background: #F66264; padding: 0 21px;box-shadow: none;border: none;color: #fff;text-shadow: none;line-height: 55px;border-radius: 0;outline: none !important;}
-header .navbar-form .search-box{position: absolute;right: 0;} 
+header .navbar-form .search-box{position: absolute;right: 0;}
 header .navbar-form .search-box .well{border: none;border-radius: 0;padding: 10px;background: #fff;width: 250px;}
 header .navbar-form .search-box .well input{border: 0;border-radius: 0;background: #ddd;color: #000;font-size: 0.8em;width: 100%;box-shadow: none;padding: 10px;}
 header .navbar-form .nav{margin:0;}
@@ -947,4 +952,69 @@ footers{background-color: #fff;
 	ul{margin: 0; padding-left: 15px;}
 
 
+}
+
+
+
+/*header .navbar-default{background:none; border:none;margin: 0;background:#fff;}*/
+
+body {
+	background-color: #222930;
+
+}
+
+header .navbar-default {
+
+	background-color: #c34f4f;
+	width: 100%;
+	-webkit-transition: all 800ms ease-out;
+	-moz-transition: all 800ms ease-out;
+	-o-transition: all 800ms ease-out;
+	transition: all 800ms ease-out;
+}
+
+header .navbar-default:hover {
+	background-color: #3BA66E;
+	width: 100%;
+	-webkit-transition: all 800ms ease-out;
+	-moz-transition: all 800ms ease-out;
+	-o-transition: all 800ms ease-out;
+	transition: all 800ms ease-out;
+}
+
+
+.navbar-right {
+	float: none !important;
+}
+
+.navbar-nav li a {
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	 font-size: 30px;
+	font-family: 'Lato', sans-serif;
+	line-height: 25px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+body > header > div > section > nav > div > div.navbar-header > div > a > h1 {
+
+}
+
+body > header > div > section > nav > div > div.navbar-header > div > a > h2 {
+	font-size: 0.5em;
+}
+
+
+body > div.spacer > div > div {
+	background-color: #ffffff;
+}
+
+
+footer {
+	background-color: #161b20;
+	text-align: center;
 }
