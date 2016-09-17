@@ -89,3 +89,29 @@
 	</nav>
 </section> <!-- /.end of section -->
 </header>
+
+<script src="wp-content/themes/ultrabootstrap2/js/jquery-3.1.0.min.js"></script>
+
+<script>
+
+	$(document).ready(function () {
+		var NavY = $('.navbar').offset().top;
+
+		var stickyNav = function () {
+			var ScrollY = $(window).scrollTop();
+
+			if (ScrollY > NavY) {
+				$('.navbar').addClass('sticky');
+			} else {
+				$('.navbar').removeClass('sticky');
+			}
+		};
+
+		stickyNav();
+
+		$(window).scroll(function () {
+			stickyNav();
+		});
+	});
+
+</script>

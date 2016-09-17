@@ -1018,3 +1018,21 @@ footer {
 	background-color: #161b20;
 	text-align: center;
 }
+
+.sticky {
+	 width: 100%;
+	 position: fixed;
+	 top: 0;
+	 z-index: 100;
+ }
+
+#main > div > div > div > div > a > img {
+	max-height: 208px;
+	text-align: center;
+	display: block; margin: 0 auto;
+
+}
+
+#main > div > div > div > div > div > p {
+	height: 200px;
+}
