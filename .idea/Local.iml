@@ -4,105 +4,17 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://$MODULE_DIR$/symfonyCRUD/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayout/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony2/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony6/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUD/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayout/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgallery2/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayoutapk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDlayout/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDuser/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgallery2/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayoutapk/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDuser/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDback/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDtest/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDback/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDlayout/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony4/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDtest/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony2/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony6/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDimage/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDimage/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3apk/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony4/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony5/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDg/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3apk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony5/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/project/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse3/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse3/example/composer.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDpanel/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDpanel/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDfinish/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDfinish/example/composer.phar/" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://$MODULE_DIR$/symfonyCRUD/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayout/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony2/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony6/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUD/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayout/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgallery2/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayoutapk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDlayout/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDuser/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDgallery2/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonylayoutapk/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDuser/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDback/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDtest/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDback/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDlayout/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony4/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDtest/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony2/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony6/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDimage/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDimage/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3apk/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony4/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony5/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDg/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDg/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony3apk/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfony5/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/project/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse3/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyuse3/example/composer.phar/" />
           <root url="phar://$MODULE_DIR$/symfonyCRUDpanel/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDpanel/example/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDfinish/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-          <root url="phar://$MODULE_DIR$/symfonyCRUDfinish/example/composer.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>
