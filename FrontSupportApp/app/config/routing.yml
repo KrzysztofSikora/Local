@@ -1,49 +1,49 @@
 my_frontend_contact:
-    resource: "@MyFrontendBundle/Controller/ContactController.php"
+    resource: "@FrontSupportBundle/Controller/ContactController.php"
     type:     annotation
 
 my_frontend_story:
-    resource: "@MyFrontendBundle/Controller/StoryController.php"
+    resource: "@FrontSupportBundle/Controller/StoryController.php"
     type:     annotation
 
 my_frontend_carousel:
-    resource: "@MyFrontendBundle/Controller/CarouselController.php"
+    resource: "@FrontSupportBundle/Controller/CarouselController.php"
     type:     annotation
 
 my_frontend_squad:
-    resource: "@MyFrontendBundle/Controller/SquadController.php"
+    resource: "@FrontSupportBundle/Controller/SquadController.php"
     type:     annotation
 
 my_frontend_album:
-    resource: "@MyFrontendBundle/Controller/AlbumController.php"
+    resource: "@FrontSupportBundle/Controller/AlbumController.php"
     type:     annotation
 
 my_frontend_album:
-    resource: "@MyFrontendBundle/Controller/AlbumController.php"
+    resource: "@FrontSupportBundle/Controller/AlbumController.php"
     type:     annotation
 
 my_frontend_album:
-    resource: "@MyFrontendBundle/Controller/AlbumController.php"
+    resource: "@FrontSupportBundle/Controller/AlbumController.php"
     type:     annotation
 
 my_frontend_album:
-    resource: "@MyFrontendBundle/Controller/AlbumController.php"
+    resource: "@FrontSupportBundle/Controller/AlbumController.php"
     type:     annotation
 
 my_frontend_image:
-    resource: "@MyFrontendBundle/Controller/ImageController.php"
+    resource: "@FrontSupportBundle/Controller/ImageController.php"
     type:     annotation
 
 my_frontend_image:
-    resource: "@MyFrontendBundle/Controller/ImageController.php"
+    resource: "@FrontSupportBundle/Controller/ImageController.php"
     type:     annotation
 
 my_frontend_tasks:
-    resource: "@MyFrontendBundle/Controller/TasksController.php"
+    resource: "@FrontSupportBundle/Controller/TasksController.php"
     type:     annotation
 
 my_frontend_tasks:
-    resource: "@MyFrontendBundle/Controller/TasksController.php"
+    resource: "@FrontSupportBundle/Controller/TasksController.php"
     type:     annotation
 
 my_user:
@@ -52,7 +52,7 @@ my_user:
     prefix:   /user
 
 my_frontend:
-    resource: "@MyFrontendBundle/Controller/"
+    resource: "@FrontSupportBundle/Controller/"
     type:     annotation
     prefix:   /
 
