@@ -7,15 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
-//{
-//    /**
-//     * @Route("/")
-//     */
-//    public function indexAction()
-//    {
-//        return $this->render('FrontSupportBundle:Default:index.html.twig');
-//    }
-//}
+
     {
     /**
      * @Route("/", name="main_index")
@@ -33,8 +25,7 @@ class DefaultController extends Controller
             4/*limit per page*/
         );
 
-        // parameters to template
-//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
 
         return $this->render('FrontSupportBundle:Default:index.html.twig', array('pagination' => $pagination));
 
@@ -46,13 +37,7 @@ class DefaultController extends Controller
     public function historyAction(Request $request)
     {
 
-//        $em = $this->getDoctrine()->getManager();
-//
-//        $stories = $em->getRepository('FrontSupportBundle:Story')->findAll();
-//
-//        return $this->render('FrontSupportBundle:Default:history.html.twig', array(
-//            'stories' => $stories,
-//        ));
+
 
 
         $em    = $this->get('doctrine.orm.entity_manager');
@@ -76,13 +61,7 @@ class DefaultController extends Controller
 
     }
 
-//    /**
-//     * @Route("/members")
-//     */
-//    public function membersAction()
-//    {
-//        return $this->render('FrontSupportBundle:Default:members.html.twig');
-//    }
+
 
     /**
      * @Route("/con", name="con_index")
@@ -90,13 +69,7 @@ class DefaultController extends Controller
     public function contactAction(Request $request)
     {
 
-//        $em = $this->getDoctrine()->getManager();
-//
-//        $contacts = $em->getRepository('FrontSupportBundle:Contact')->findAll();
-//
-//        return $this->render('FrontSupportBundle:Default:contact.html.twig', array(
-//            'contacts' => $contacts,
-//        ));
+
 
 
         $em    = $this->get('doctrine.orm.entity_manager');
@@ -110,8 +83,7 @@ class DefaultController extends Controller
             4/*limit per page*/
         );
 
-        // parameters to template
-//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
 
         return $this->render('FrontSupportBundle:Default:contact.html.twig', array('pagination' => $pagination));
 
@@ -140,20 +112,13 @@ class DefaultController extends Controller
             16/*limit per page*/
         );
 
-        // parameters to template
-//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
         return $this->render('FrontSupportBundle:Default:gallery.html.twig', array('pagination' => $pagination));
     }
 
 
 
-//    public function carouselAction()
-//    {
-//        return $this->render('FrontSupportBundle:Default:carousel.html.twig', array('test' => '2'));
-//
-//
-//
-//    }
+
 
     /**
      * @Route("/panel", name="panel_index")
@@ -161,7 +126,7 @@ class DefaultController extends Controller
     public function panelAction()
     {
 
-//        return $this->render('FrontSupportBundle:Default:history.html.twig') +
+
         return $this->render('FrontSupportBundle:Default:panel.html.twig');
     }
 
@@ -184,8 +149,7 @@ class DefaultController extends Controller
             4/*limit per page*/
         );
 
-        // parameters to template
-//        return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
+
 
         return $this->render('FrontSupportBundle:Default:members.html.twig', array('pagination' => $pagination));
 

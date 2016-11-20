@@ -43,7 +43,6 @@ class GalleryController extends Controller
         $entity = $em->getRepository('FrontSupportBundle:Image')->findByAlbum($id);
 
         if (!$entity) {
-//            throw $this->createNotFoundException('Brak filmu o podanym id!');
 
         }
 
@@ -51,7 +50,6 @@ class GalleryController extends Controller
         return $this->render('FrontSupportBundle:Gallery:show.html.twig', array('entity' => $entity));
 
 
-//       return array('entity' => $entity);
     }
 
 

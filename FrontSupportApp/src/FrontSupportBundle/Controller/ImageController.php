@@ -58,46 +58,33 @@ class ImageController extends Controller
 
 
             $i = $image->getFilename();
-            if ($finfo == '' or $i == '' ) {
+            if ($finfo == '' or $i == '') {
                 return $this->render('image/new.html.twig', array(
                     'image' => $image,
                     'form' => $form->createView(),
                     'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
                 ));
             }
-                if (finfo_file($finfo, $i) == 'image/jpeg' or finfo_file($finfo, $i) == 'image/png') {
-                    $file = $image;
-                    $file->setFilename($i->getClientOriginalName());
-                    $file->setMime(finfo_file($finfo, $i));
-                    $file->setContents(base64_encode(file_get_contents($i)));
+            if (finfo_file($finfo, $i) == 'image/jpeg' or finfo_file($finfo, $i) == 'image/png') {
+                $file = $image;
+                $file->setFilename($i->getClientOriginalName());
+                $file->setMime(finfo_file($finfo, $i));
+                $file->setContents(base64_encode(file_get_contents($i)));
 
 
-                    $em->persist($file);
-                    $em->flush();
-                    finfo_close($finfo);
-                    return $this->redirectToRoute('image_show', array('id' => $image->getId()));
+                $em->persist($file);
+                $em->flush();
+                finfo_close($finfo);
+                return $this->redirectToRoute('image_show', array('id' => $image->getId()));
 
-                } else {
-                    return $this->render('image/new.html.twig', array(
-                        'image' => $image,
-                        'form' => $form->createView(),
-                        'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
-                    ));
-                }
+            } else {
+                return $this->render('image/new.html.twig', array(
+                    'image' => $image,
+                    'form' => $form->createView(),
+                    'err' => 'Błędny typ danych. Wrzuć .jpg lub .png'
+                ));
+            }
 
-
-
-//            $user = $this->getUser();
-
-//            $id = $image->getDescription();
-//            $i = $image->getFilename();
-//            $i->getMimeType() //mimeType
-//            $i->all();
-
-//            return $this->render('image/upload.html.twig', array(
-//                'content' => $user
-//            ));
-//            return $this->redirectToRoute('image_show', array('id' => $image->getId()));
 
         }
 
@@ -207,11 +194,7 @@ class ImageController extends Controller
         $response->headers->set('Content-Type', $entity->getMime());
         return $response;
 
-//        return $this->render('image/upload.html.twig', array(
-//            'mimeType' => $entity->getMime(),
-//            'content' => $entity->getContents()
-//
-//        ));
+
     }
 
     public function carouselAction()
@@ -223,8 +206,6 @@ class ImageController extends Controller
         return $this->render('FrontSupportBundle:Default:carousel.html.twig', array(
             'images' => $images,
         ));
-
-
 
 
     }

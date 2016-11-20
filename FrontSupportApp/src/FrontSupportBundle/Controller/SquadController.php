@@ -49,8 +49,7 @@ class SquadController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-//            $em->persist($squad);
-//            $em->flush();
+
 
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
             $i = $squad->getFilenameee();
@@ -179,7 +178,7 @@ class SquadController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-//        $entity =  new Image();
+
         $entity = $em->getRepository('FrontSupportBundle:Squad')
             ->findOneByFilenameee($filename);
         if (!$entity) {
@@ -191,10 +190,6 @@ class SquadController extends Controller
         $response->headers->set('Content-Type', $entity->getMimeee());
         return $response;
 
-//        return $this->render('image/upload.html.twig', array(
-//            'mimeType' => $entity->getMime(),
-//            'content' => $entity->getContents()
-//
-//        ));
+
     }
 }

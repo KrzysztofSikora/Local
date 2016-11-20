@@ -182,7 +182,7 @@ class ContactController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-//        $entity =  new Image();
+
         $entity = $em->getRepository('FrontSupportBundle:Contact')
             ->findOneByCofilename($filename);
         if (!$entity) {
@@ -194,10 +194,5 @@ class ContactController extends Controller
         $response->headers->set('Content-Type', $entity->getConmime());
         return $response;
 
-//        return $this->render('image/upload.html.twig', array(
-//            'mimeType' => $entity->getMime(),
-//            'content' => $entity->getContents()
-//
-//        ));
     }
 }

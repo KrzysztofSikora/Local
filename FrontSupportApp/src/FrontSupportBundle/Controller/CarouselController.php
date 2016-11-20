@@ -49,8 +49,7 @@ class CarouselController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-//            $em->persist($carousel);
-//            $em->flush();
+
 
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
             $i = $carousel->getCfilename();
@@ -83,12 +82,12 @@ class CarouselController extends Controller
                 ));
             }
         }
-            return $this->render('carousel/new.html.twig', array(
-                'carousel' => $carousel,
-                'form' => $form->createView(),
-                'err' => null
-            ));
-        }
+        return $this->render('carousel/new.html.twig', array(
+            'carousel' => $carousel,
+            'form' => $form->createView(),
+            'err' => null
+        ));
+    }
 
     /**
      * Finds and displays a Carousel entity.
@@ -165,8 +164,7 @@ class CarouselController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('carousel_delete', array('id' => $carousel->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 
     /**
@@ -178,7 +176,6 @@ class CarouselController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-//        $entity =  new Image();
         $entity = $em->getRepository('FrontSupportBundle:Carousel')
             ->findOneByCfilename($filename);
         if (!$entity) {
@@ -190,10 +187,6 @@ class CarouselController extends Controller
         $response->headers->set('Content-Type', $entity->getCmime());
         return $response;
 
-//        return $this->render('image/upload.html.twig', array(
-//            'mimeType' => $entity->getMime(),
-//            'content' => $entity->getContents()
-//
-//        ));
+
     }
 }

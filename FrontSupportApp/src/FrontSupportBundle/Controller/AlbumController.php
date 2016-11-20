@@ -49,8 +49,6 @@ class AlbumController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-//            $em->persist($album);
-//            $em->flush();
 
 
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
