@@ -6,18 +6,18 @@
     }
 
 </style>
-    {% for film in dane %}
+    {% for picture in dane %}
 
 
         <div class="col-md-3" >
 
             <div class="thumbnail" style="background-color: #2f4052">
-            <a href="{{ path('film_show', { 'id': film.id }) }}">
-                <img class= "img-responsive" src="{{ path('filee_show', { 'filename': film.filenamee }) }}" alt="..." style="height: 180px">
+            <a href="{{ path('picture_show', { 'id': picture.id }) }}">
+                <img class= "img-responsive" src="{{ path('filee_show', { 'filename': picture.filenamee }) }}" alt="..." style="height: 180px">
             </a>
-            <i style="font-size: 20px" class="icon-camera" >{{ film.descriptionn }}</i>
+            <i style="font-size: 20px" class="icon-camera" >{{ picture.descriptionn }}</i>
         </div>
-        {#<p style="text-align: center">{{ film.descriptionn }}</p>#}
+        {#<p style="text-align: center">{{ picture.descriptionn }}</p>#}
             <br/>
         </div>
 

@@ -16,9 +16,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class GalleryController extends Controller
 {
     /**
-     * Lista wszystkich filmow
+     * Lista wszystkich pictureow
      *
-     * @Route("/albums", name="film_index")
+     * @Route("/albums", name="picture_index")
      * @Template()
      */
     public function indexAction()
@@ -30,9 +30,9 @@ class GalleryController extends Controller
     }
 
     /**
-     * Szczegolowe dane filmu
+     * Szczegolowe dane pictureu
      *
-     * @Route("/film/{id}.html", name="film_show")
+     * @Route("/picture/{id}.html", name="picture_show")
      * @Template()
      */
 
