@@ -50,9 +50,6 @@ class ImageController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-//            $em->persist($image);
-//            $em->flush();
-
 
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
 
@@ -182,7 +179,6 @@ class ImageController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-//        $entity =  new Image();
         $entity = $em->getRepository('FrontSupportBundle:Image')
             ->findOneByFilename($filename);
         if (!$entity) {

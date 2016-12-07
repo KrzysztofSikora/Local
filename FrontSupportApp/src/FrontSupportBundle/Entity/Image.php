@@ -58,13 +58,7 @@ class Image
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
-    
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="status", type="boolean")
-     */
-    private $status;
+
     
     /**
      * Get id
