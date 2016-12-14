@@ -1,55 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {#<h1>Lista kontaktów</h1>#}
 
-    {#<table>#}
-        {#<thead>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<th>Nazwa obrazka</th>#}
-                {#<th>Typ obrazka</th>#}
-                {#<th>Obrazek</th>#}
-                {#<th>Opis</th>#}
-                {#<th>Imię i Nazwisko</th>#}
-                {#<th>Telefon</th>#}
-                {#<th>Email</th>#}
-                {#<th>Opcje</th>#}
-            {#</tr>#}
-        {#</thead>#}
-        {#<tbody>#}
-        {#{% for contact in contacts %}#}
-            {#<tr>#}
-                {#<td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>#}
-                {#<td>{{ contact.cofilename }}</td>#}
-                {#<td>{{ contact.conmime }}</td>#}
-                {#<td>{{ contact.cocontents }}</td>#}
-                {#<td><a href="{{ path('confile_show', { 'filename': contact.cofilename }) }}"><img#}
-                                {#src="{{ path('confile_show', { 'filename': contact.cofilename }) }}  " style="height: 250px"></a>#}
-                {#<td>{{ contact.condescription }}</td>#}
-                {#<td>{{ contact.conname }}</td>#}
-                {#<td>{{ contact.tel }}</td>#}
-                {#<td>{{ contact.meil }}</td>#}
-                {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('contact_show', { 'id': contact.id }) }}">Pokaż</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="{{ path('contact_edit', { 'id': contact.id }) }}">Edytuj</a>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</td>#}
-            {#</tr>#}
-        {#{% endfor %}#}
-        {#</tbody>#}
-    {#</table>#}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('contact_new') }}">Dodaj nowy kontakt</a>#}
-        {#</li>#}
-    {#</ul>#}
     <h1>Lista kontaktów</h1>
     <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a><br/>
     <a href="{{ path('panel_index') }}">Panel</a>
