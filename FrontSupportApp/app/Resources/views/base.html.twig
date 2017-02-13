@@ -5,7 +5,8 @@
     <title>Miejska Orkiestra Dęta w Suchej Beskidzkiej</title>
     <meta name="description"
           content="Serwis poświęcony Miejskiej Orkiestrze Dętej w Suchej Beskidzkiej."/>
-    <meta name="keywords" content="orkiestra, muzyka, Sucha Beskidzka, kapelmistrz, instrumenty dęte, historia orkiestry, miejska orkiestra"/>
+    <meta name="keywords"
+          content="orkiestra, muzyka, Sucha Beskidzka, kapelmistrz, instrumenty dęte, historia orkiestry, miejska orkiestra"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     {#<link rel="stylesheet" href="style.css" type="text/css"/>#}
     {#<link rel="stylesheet" href="css/fontello.css" type="text/css"/>#}
@@ -22,15 +23,14 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {#<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">#}
-    <link href=" {{asset ("/css/lightgallery.css") }}" rel="stylesheet">
-
+    <link href=" {{ asset ("/css/lightgallery.css") }}" rel="stylesheet">
 
 
     <style>
         body {
             font-family: 'Lato', sans-serif;
             font-size: 150%;
-            color:#3BA66E;
+            color: #3BA66E;
             background-color: #222930;
             /*background-color: #000000;*/
             /*background-color: #f1f1f1;*/
@@ -41,14 +41,16 @@
         }
 
         #footer {
-            text-align: center;background-color: #161b20
+            text-align: center;
+            background-color: #161b20
         }
 
         /*kolor a w task index*/
-       ul > li > a {
+        ul > li > a {
             list-style-type: none;
             color: red;
         }
+
         ul > li {
             list-style-type: none;
 
@@ -59,10 +61,11 @@
         }
 
         #content > div > div {
-            background-color: #ffffff;
+            /*background-color: #ffffff;*/
             padding: 5px;
             border: solid 1px;
         }
+
         .breadcrumb {
             /*background-color: #161b20;*/
             /*background: rgba(255,255,255,1);*/
@@ -73,8 +76,6 @@
             /*background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(218,37,29,1) 46%, rgba(218,37,29,1) 47%, rgba(0,146,63,1) 82%, rgba(0,146,63,1) 100%);*/
             /*background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(218,37,29,1) 46%, rgba(218,37,29,1) 47%, rgba(0,146,63,1) 82%, rgba(0,146,63,1) 100%);*/
             /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00923f', GradientType=0 );*/
-
-
 
             background-color: #222930;
 
@@ -149,7 +150,7 @@
         }
 
         body > div > nav > div {
-            background-color: #c34f4f;
+            background-color: #3BA66E;
             /*background-color: #ec2a32;*/
             width: 100%;
             -webkit-transition: all 800ms ease-out;
@@ -157,6 +158,7 @@
             -o-transition: all 800ms ease-out;
             transition: all 800ms ease-out;
         }
+
         body > div > nav > div:hover {
             background-color: #3BA66E;
             width: 100%;
@@ -183,18 +185,15 @@
         }
 
         /*.info{*/
-            /*display: none;*/
+        /*display: none;*/
 
         /*}*/
         /*.yt:hover>.info {*/
-            /*display: block;*/
+        /*display: block;*/
         /*}*/
         /*.yt:hover > a > i {*/
-            /*display: none;*/
+        /*display: none;*/
         /*}*/
-
-
-
 
         .yt {
             /*width: 50%;*/
@@ -222,6 +221,7 @@
             -o-transition: all 600ms ease-out;
             transition: all 600ms ease-out;
         }
+
         .albums {
             background-color: #f17436;
         }
@@ -233,6 +233,7 @@
             -o-transition: all 600ms ease-out;
             transition: all 600ms ease-out;
         }
+
         .images {
             background-color: #4fade3;
         }
@@ -244,7 +245,6 @@
             -o-transition: all 600ms ease-out;
             transition: all 600ms ease-out;
         }
-
 
         .post {
             background-color: #589f5a;
@@ -261,11 +261,13 @@
         .caro {
             background-color: #5e80b9;
         }
+
         a {
-            color:white;
+            color: white;
         }
+
         /*a:hover {*/
-            /*color:white;*/
+        /*color:white;*/
         /*}*/
         .caro:hover {
             background-color: #3BA66E;
@@ -312,27 +314,25 @@
         }
 
         /*.carousel {*/
-            /*background-color: #161b20;*/
-            /*-webkit-transition: all 800ms ease-out;*/
-            /*-moz-transition: all 800ms ease-out;*/
-            /*-o-transition: all 800ms ease-out;*/
-            /*transition: all 800ms ease-out;*/
+        /*background-color: #161b20;*/
+        /*-webkit-transition: all 800ms ease-out;*/
+        /*-moz-transition: all 800ms ease-out;*/
+        /*-o-transition: all 800ms ease-out;*/
+        /*transition: all 800ms ease-out;*/
         /*}*/
 
         /*.carousel:hover {*/
-            /*background-color: #3BA66E;*/
-            /*-webkit-transition: all 800ms ease-out;*/
-            /*-moz-transition: all 800ms ease-out;*/
-            /*-o-transition: all 800ms ease-out;*/
-            /*transition: all 800ms ease-out;*/
+        /*background-color: #3BA66E;*/
+        /*-webkit-transition: all 800ms ease-out;*/
+        /*-moz-transition: all 800ms ease-out;*/
+        /*-o-transition: all 800ms ease-out;*/
+        /*transition: all 800ms ease-out;*/
         /*}*/
-
-
-
 
         #content > div > a > div {
             padding: 4px;
         }
+
         .tw {
             /*width: 50%;*/
             /*height: 155px;*/
@@ -357,25 +357,24 @@
         }
 
         #content {
-            {#background-image: url( {{ asset('images/godło1.png') }});#}
-            {#background-repeat: no-repeat;#}
-            {#background-attachment: fixed;#}
-            {#background-position: center center;#}
-            {#background-size: 300px;#}
+        {#background-image: url( {{ asset('images/godło1.png') }});#}{#background-repeat: no-repeat;#}{#background-attachment: fixed;#}{#background-position: center center;#}{#background-size: 300px;#}
             /*opacity: 0.2;*/
         }
 
-    #footbar {
-        text-align: center;
-    }
+        #footbar {
+            text-align: center;
+        }
+
         #footbar > div:nth-child(1) > div.col-md-8 > div:nth-child(3) > div > a:hover {
             color: white;
             text-decoration: underline;
         }
+
         #footbar > div:nth-child(1) > div.col-md-8 > div:nth-child(4) > div > a:hover {
             color: white;
             text-decoration: underline;
         }
+
         #footbar > div:nth-child(1) > div.col-md-8 > div:nth-child(2) > div > a:hover {
             color: white;
             text-decoration: underline;
@@ -390,6 +389,7 @@
             color: #3BA66E;
             text-decoration: none;
         }
+
         .gplus:hover {
             /*background-color: #d95333;*/
             background-color: #fffc01;
@@ -430,7 +430,7 @@
         #content {
             min-height: 600px;
             margin-top: 25px;
-            margin-bottom:25px;
+            margin-bottom: 25px;
             text-align: left;
         }
 
@@ -444,17 +444,20 @@
             text-align: center;
             min-width: 144px;
         }
+
         /*galeria*/
 
         .demo-gallery > ul {
             margin-bottom: 0;
         }
+
         .demo-gallery > ul > li {
             float: left;
             margin-bottom: 15px;
             margin-right: 20px;
             width: 200px;
         }
+
         .demo-gallery > ul > li a {
             border: 3px solid #FFF;
             border-radius: 3px;
@@ -463,6 +466,7 @@
             position: relative;
             float: left;
         }
+
         .demo-gallery > ul > li a > img {
             -webkit-transition: -webkit-transform 0.15s ease 0s;
             -moz-transition: -moz-transform 0.15s ease 0s;
@@ -473,13 +477,16 @@
             height: 100%;
             width: 100%;
         }
+
         .demo-gallery > ul > li a:hover > img {
             -webkit-transform: scale3d(1.1, 1.1, 1.1);
             transform: scale3d(1.1, 1.1, 1.1);
         }
+
         .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
             opacity: 1;
         }
+
         .demo-gallery > ul > li a .demo-gallery-poster {
             background-color: rgba(0, 0, 0, 0.1);
             bottom: 0;
@@ -491,6 +498,7 @@
             -o-transition: background-color 0.15s ease 0s;
             transition: background-color 0.15s ease 0s;
         }
+
         .demo-gallery > ul > li a .demo-gallery-poster > img {
             left: 50%;
             margin-left: -10px;
@@ -502,9 +510,11 @@
             -o-transition: opacity 0.3s ease 0s;
             transition: opacity 0.3s ease 0s;
         }
+
         .demo-gallery > ul > li a:hover .demo-gallery-poster {
             background-color: rgba(0, 0, 0, 0.5);
         }
+
         .demo-gallery .justified-gallery > a > img {
             -webkit-transition: -webkit-transform 0.15s ease 0s;
             -moz-transition: -moz-transform 0.15s ease 0s;
@@ -515,13 +525,16 @@
             height: 100%;
             width: 100%;
         }
+
         .demo-gallery .justified-gallery > a:hover > img {
             -webkit-transform: scale3d(1.1, 1.1, 1.1);
             transform: scale3d(1.1, 1.1, 1.1);
         }
+
         .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
             opacity: 1;
         }
+
         .demo-gallery .justified-gallery > a .demo-gallery-poster {
             background-color: rgba(0, 0, 0, 0.1);
             bottom: 0;
@@ -533,6 +546,7 @@
             -o-transition: background-color 0.15s ease 0s;
             transition: background-color 0.15s ease 0s;
         }
+
         .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
             left: 50%;
             margin-left: -10px;
@@ -544,9 +558,11 @@
             -o-transition: opacity 0.3s ease 0s;
             transition: opacity 0.3s ease 0s;
         }
+
         .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
             background-color: rgba(0, 0, 0, 0.5);
         }
+
         .demo-gallery .video .demo-gallery-poster img {
             height: 48px;
             margin-left: -24px;
@@ -554,39 +570,73 @@
             opacity: 0.8;
             width: 48px;
         }
+
         .demo-gallery.dark > ul > li a {
             border: 3px solid #04070a;
         }
+
         .home .demo-gallery {
             padding-bottom: 80px;
         }
 
-
-
         /*label {*/
-            /*padding: 15px;*/
+        /*padding: 15px;*/
         /*}*/
 
         /*input {*/
-            /*float: right;*/
+        /*float: right;*/
         /*}*/
 
         /*textarea {*/
-            /*float: right;*/
+        /*float: right;*/
         /*}*/
 
-    </style>
+        /*custommmmm */
+        body {
+            font-family: 'Lato', sans-serif;
+            font-size: 150%;
+            color: #3BA66E;
 
-</head>
-<body>
-<div class="container">
+            /*background-color: #000000;*/
+            /*background-color: #f1f1f1;*/
+            background: rgba(252, 198, 49, 1);
+            background: -moz-linear-gradient(45deg, rgba(252, 198, 49, 1) 0%, rgba(230, 168, 0, 1) 0%, rgba(5, 2, 13, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 1) 100%);
+            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(252, 198, 49, 1)), color-stop(0%, rgba(230, 168, 0, 1)), color-stop(0%, rgba(5, 2, 13, 1)), color-stop(55%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+            background: -webkit-linear-gradient(45deg, rgba(252, 198, 49, 1) 0%, rgba(230, 168, 0, 1) 0%, rgba(5, 2, 13, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 1) 100%);
+            background: -o-linear-gradient(45deg, rgba(252, 198, 49, 1) 0%, rgba(230, 168, 0, 1) 0%, rgba(5, 2, 13, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 1) 100%);
+            background: -ms-linear-gradient(45deg, rgba(252, 198, 49, 1) 0%, rgba(230, 168, 0, 1) 0%, rgba(5, 2, 13, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 1) 100%);
+            background: linear-gradient(45deg, rgba(252, 198, 49, 1) 0%, rgba(230, 168, 0, 1) 0%, rgba(5, 2, 13, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcc631', endColorstr='#ffffff', GradientType=1);
+
+        }
+
+        #content > div > div {
+            border: none;
+
+        }
+
+        h3 {
+            border-bottom: 3px solid #3BA66E;
+        }
+
+        h3 {
+
+            border-bottom: 2px solid #3BA66E;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+
+        }
+
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'><div class="container">
 
 
     <div class="breadcrumb">
 
 
-
-        <h2 style="color: #c34f4f;text-align: center"><img src="{{ asset('images/godło1.png') }}" style="margin-right: 20px" width="40px">Miejska Orkiestra Dęta W Suchej Beskidzkiej
+        <h2 style="color: #c34f4f;text-align: center;font-family: 'Berkshire Swash', sans-serif;"><img src="{{ asset('images/godło1.png') }}"
+                                                           style="margin-right: 20px" width="40px">Miejska Orkiestra
+            Dęta W Suchej Beskidzkiej
 
         </h2>
 
@@ -596,23 +646,6 @@
     {{ render(controller('FrontSupportBundle:Image:carousel')) }}
     <!-- navbar
 ================================================== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <nav class="navbar  navbar-default">
@@ -663,7 +696,7 @@
             <div class="col-md-2">
                 <div>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                           Jesteś zalogowany jako administrator.
+                        Jesteś zalogowany jako administrator.
                         <a href="{{ path('fos_user_security_logout') }}">Wyloguj</a>
                     {% elseif is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
@@ -698,7 +731,8 @@
                 </div>
 
                 <div class="col-xs-6 col-sm-4 col-md-3">
-                    <div class="gplus"><a href="https://www.plus.google.com"><i class="icon-snapchat-square"></i></a></div>
+                    <div class="gplus"><a href="https://www.plus.google.com"><i class="icon-snapchat-square"></i></a>
+                    </div>
                 </div>
 
                 <div style="clear: both"></div>
@@ -744,33 +778,33 @@
 
     </script>
     {#<script>#}
-        {#// Create a clone of the menu, right next to original.#}
-        {#$('.navbar').addClass('original').clone().insertAfter('.navbar').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();#}
+    {#// Create a clone of the menu, right next to original.#}
+    {#$('.navbar').addClass('original').clone().insertAfter('.navbar').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();#}
 
-        {#scrollIntervalID = setInterval(stickIt, 10);#}
+    {#scrollIntervalID = setInterval(stickIt, 10);#}
 
 
-        {#function stickIt() {#}
+    {#function stickIt() {#}
 
-            {#var orgElementPos = $('.original').offset();#}
-            {#orgElementTop = orgElementPos.top;#}
+    {#var orgElementPos = $('.original').offset();#}
+    {#orgElementTop = orgElementPos.top;#}
 
-            {#if ($(window).scrollTop() >= (orgElementTop)) {#}
-                {#// scrolled past the original position; now only show the cloned, sticky element.#}
+    {#if ($(window).scrollTop() >= (orgElementTop)) {#}
+    {#// scrolled past the original position; now only show the cloned, sticky element.#}
 
-                {#// Cloned element should always have same left position and width as original element.#}
-                {#orgElement = $('.original');#}
-                {#coordsOrgElement = orgElement.offset();#}
-                {#leftOrgElement = coordsOrgElement.left;#}
-                {#widthOrgElement = orgElement.css('width');#}
-                {#$('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();#}
-                {#$('.original').css('visibility','hidden');#}
-            {#} else {#}
-                {#// not scrolled past the menu; only show the original menu.#}
-                {#$('.cloned').hide();#}
-                {#$('.original').css('visibility','visible');#}
-            {#}#}
-        {#}#}
+    {#// Cloned element should always have same left position and width as original element.#}
+    {#orgElement = $('.original');#}
+    {#coordsOrgElement = orgElement.offset();#}
+    {#leftOrgElement = coordsOrgElement.left;#}
+    {#widthOrgElement = orgElement.css('width');#}
+    {#$('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();#}
+    {#$('.original').css('visibility','hidden');#}
+    {#} else {#}
+    {#// not scrolled past the menu; only show the original menu.#}
+    {#$('.cloned').hide();#}
+    {#$('.original').css('visibility','visible');#}
+    {#}#}
+    {#}#}
     {#</script>#}
     <script src="{{ asset("/js/picturefill.min.js") }}"></script>
     {#<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>#}
@@ -778,7 +812,7 @@
     {#<script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>#}
     <script src="{{ asset("/js/lg-pager.js") }}"></script>
     {#<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>#}
-    <script src="{{ asset("/js/lg-autoplay.js")}}"></script>
+    <script src="{{ asset("/js/lg-autoplay.js") }}"></script>
     {#<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>#}
     <script src="{{ asset("/dist/lg-fullscreen.js") }}"></script>
     {#<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>#}
